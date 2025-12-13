@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add('loaded');
 
       // Start typewriter after loader
-      setTimeout(initTypewriter, 500);
+      if (typeof initTypewriter === 'function') {
+        setTimeout(initTypewriter, 500);
+      }
     }
   };
 
