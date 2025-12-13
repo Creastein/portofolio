@@ -5,6 +5,7 @@ export default defineConfig({
   // base: '/portofolio/' jika deploy ke repo URL
   // base: '/' jika deploy ke domain utama (misal custom domain)
   base: '/portofolio/',
+  publicDir: 'public',
   build: {
     outDir: 'dist',
     sourcemap: false, // Disable sourcemaps untuk production
