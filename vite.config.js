@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // GitHub Pages URL structure: https://username.github.io/repository/
-  // base: '/portofolio/' jika deploy ke repo URL
-  // base: '/' jika deploy ke domain utama (misal custom domain)
+  // GitHub Pages deployment path
   base: '/portofolio/',
   publicDir: 'public',
+  assetsInclude: ['**/*.png', '**/*.json'],
   build: {
     outDir: 'dist',
     sourcemap: false, // Disable sourcemaps untuk production
