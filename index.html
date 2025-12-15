@@ -22,7 +22,7 @@
   <meta property="og:title" content="WELLI | Business Analyst & Developer Portfolio">
   <meta property="og:description"
     content="Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.">
-  <meta property="og:image" content="/images/og-image.png">
+  <meta property="og:image" content="/portofolio/images/logo.png">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
@@ -31,18 +31,18 @@
   <meta property="twitter:title" content="WELLI | Business Analyst & Developer Portfolio">
   <meta property="twitter:description"
     content="Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.">
-  <meta property="twitter:image" content="/images/og-image.png">
+  <meta property="twitter:image" content="/portofolio/images/logo.png">
 
   <!-- PWA Meta Tags -->
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="WELLI Portfolio">
-  <link rel="manifest" href="/portofolio/manifest.json">
-  <link rel="apple-touch-icon" href="/portofolio/icons/icon-192x192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192x192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/portofolio/images/logo.png" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
 
   <!-- Critical CSS - Inline to prevent white flash -->
   <style>
@@ -166,9 +166,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Oswald:wght@700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Particles.js -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+
+  <!-- Particles.js (Local) -->
+  <script src="particles.js"></script>
 </head>
 
 <body>
@@ -189,7 +191,7 @@
   <nav class="navbar">
     <div class="container nav-container">
       <a href="#home" class="logo">
-        <img src="/portofolio/images/logo.png" alt="WELLI Logo" width="120" height="auto">
+        <img src="images/logo.png" alt="WELLI Logo" width="120" height="auto">
       </a>
       <button class="mobile-toggle" aria-label="Toggle navigation">
         <span></span>
@@ -258,7 +260,7 @@
         <div class="about-image fade-in stagger-1">
           <div class="image-overlay-gradient"></div>
           <!-- User's Stylish B&W Portrait -->
-          <img src="/portofolio/images/about-me.png" alt="WELLI - Business Analyst and Developer Portrait" loading="lazy"
+          <img src="images/about-me.png" alt="WELLI - Business Analyst and Developer Portrait" loading="lazy"
             decoding="async">
         </div>
       </div>
@@ -274,34 +276,40 @@
       </div>
       <div class="services-grid">
         <div class="service-card fade-in stagger-1">
-          <div class="icon">🎨</div>
-          <h3>Interface Design</h3>
-          <p>Beautiful, intuitive interfaces that users love to interact with.</p>
+          <div class="icon">
+            <img src="icons/bar-chart-2.svg" alt="Business Analysis Icon" width="48" height="48">
+          </div>
+          <h3>Business & System Analysis</h3>
+          <p>Analyze business processes, identify problems, and translate requirements into clear system and feature
+            definitions.</p>
         </div>
         <div class="service-card fade-in stagger-2">
-          <div class="icon">💻</div>
-          <h3>Themes Development</h3>
-          <p>Custom themes built with modern frameworks and best practices.</p>
+          <div class="icon">
+            <img src="icons/code.svg" alt="Frontend Development Icon" width="48" height="48">
+          </div>
+          <h3>Frontend Web Development</h3>
+          <p>Build clean, responsive, and user-friendly web interfaces using modern frontend technologies.</p>
         </div>
         <div class="service-card fade-in stagger-3">
-          <div class="icon">📈</div>
-          <h3>Content Marketing</h3>
-          <p>Strategic content that resonates with your audience and drives engagement.</p>
+          <div class="icon">
+            <img src="icons/layers.svg" alt="UI Implementation Icon" width="48" height="48">
+          </div>
+          <h3>UI Implementation from Requirements</h3>
+          <p>Turn business and user requirements into practical, intuitive, and functional user interfaces.</p>
         </div>
         <div class="service-card fade-in stagger-4">
-          <div class="icon">📱</div>
-          <h3>Mobile Apps</h3>
-          <p>Native and cross-platform mobile applications that users love.</p>
+          <div class="icon">
+            <img src="icons/git-branch.svg" alt="System Design Icon" width="48" height="48">
+          </div>
+          <h3>System & Feature Design</h3>
+          <p>Design system flows, page structures, and features that align with real business goals.</p>
         </div>
         <div class="service-card fade-in stagger-5">
-          <div class="icon">🖥️</div>
-          <h3>Responsive Design</h3>
-          <p>Pixel-perfect designs that work seamlessly across all devices.</p>
-        </div>
-        <div class="service-card fade-in stagger-6">
-          <div class="icon">🔄</div>
-          <h3>Free Updates</h3>
-          <p>Continuous improvements and updates to keep your project fresh.</p>
+          <div class="icon">
+            <img src="icons/globe.svg" alt="Website Icon" width="48" height="48">
+          </div>
+          <h3>Website for Small Business & Personal Use</h3>
+          <p>Create simple and effective websites tailored for small businesses and personal portfolios.</p>
         </div>
       </div>
     </div>
