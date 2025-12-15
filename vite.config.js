@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // GitHub Pages deployment path - use root for universal compatibility
-  base: '/',
+  // GitHub Pages deployment path - repo is served from /portofolio/ subdirectory
+  base: '/portofolio/',
   publicDir: 'public',
   assetsInclude: ['**/*.png', '**/*.json'],
   build: {
