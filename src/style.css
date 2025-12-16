@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   /* Dark Theme Color Palette (Default) */
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --accent-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -49,85 +49,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-primary);
-  color: var(--text-gray);
-  background-color: var(--bg-dark);
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-/* Hide default cursor on desktop for custom cursor */
-@media (pointer: fine) {
-  body.loaded {
-    cursor: none;
-  }
-
-  body.loaded a,
-  body.loaded button,
-  body.loaded input,
-  body.loaded [role="button"] {
-    cursor: none;
-  }
-}
-
-/* ===== LOADING SCREEN ===== */
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-
-.loader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.loader-content {
-  text-align: center;
-}
-
-.loader-logo {
-  font-family: 'Oswald', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--white);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-  animation: pulse 1.5s ease-in-out infinite;
-}
-
-.loader-logo .accent {
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-@keyframes pulse {
-
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.7;
-    transform: scale(0.98);
-  }
 }
 
 .loader-bar {
@@ -1240,4 +1161,122 @@ body.loaded .hero-item.stagger-5 {
   .section {
     padding: 80px 0;
   }
+}/* CSS for Latest Project Design */
+
+
+
+/* Section Title - Oswald Font override for this section if needed, though global h2 is Playfair. 
+
+   User screenshot shows bold sans-serif/Oswald style. */
+
+.section-header h2 {
+
+    font-family: 'Oswald', sans-serif;
+
+    /* Match screenshot style */
+
+    text-transform: capitalize;
+
+    /* "Latest Project" or Title Case */
+
+    font-size: 3.5rem;
+
 }
+
+
+
+/* Featured Style Portfolio Item */
+
+.portfolio-item.featured-style .portfolio-overlay {
+
+    opacity: 1;
+
+    /* Always visible or specific style */
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+
+    align-items: flex-start;
+
+    /* Align text to left */
+
+    justify-content: flex-end;
+
+    /* Align text to bottom */
+
+    padding: 30px;
+
+    text-align: left;
+
+}
+
+
+
+.portfolio-item.featured-style h3 {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+    transform: translateY(0);
+
+}
+
+
+
+.portfolio-item.featured-style .category {
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 1rem;
+
+    margin-bottom: 20px;
+
+    display: block;
+
+}
+
+
+
+.view-work-btn {
+
+    display: inline-block;
+
+    color: #fff;
+
+    text-transform: uppercase;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
+
+    padding: 10px 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border-bottom: 2px solid #fff;
+
+    transition: all 0.3s ease;
+
+    text-decoration: none;
+
+    opacity: 1;
+
+    /* Make button visible */
+
+    margin-top: 10px;
+
+}
+
+
+
+.view-work-btn:hover {
+
+    background: #fff;
+
+    color: #000;
+
+}
+
+
