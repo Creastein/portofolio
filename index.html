@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -170,7 +170,7 @@
 
 
   <!-- Particles.js (Local) -->
-  <script src="/particles.js" defer></script>
+  <script src="particles.js" defer></script>
 </head>
 
 <body>
@@ -316,71 +316,101 @@
   </section>
 
   <!-- Works / Portfolio Section -->
-  <section id="works" class="section works-section">
+
+  <!-- START: Works Section -->
+  <section id="works" class="section works">
     <div class="container">
-      <div class="section-header fade-in">
-        <h2>Latest Project</h2>
-        <p>A showcase of my latest projects, combining creativity with cutting-edge technology.</p>
-      </div>
+      <header class="section-header">
+        <h2 class="section-title">Project</h2>
+        <p class="section-subtitle">Portfolio</p>
+      </header>
 
       <div class="portfolio-grid">
-        <!-- Portfolio Item 1 - Featured Style -->
-        <div class="portfolio-item fade-in stagger-1 featured-style">
-          <div class="portfolio-image" data-bg="images/portfolio-1.jpg"></div>
+        <!-- Item 1 -->
+        <a class="portfolio-item fade-in stagger-1" href="https://creastein.github.io/portofolio" target="_blank"
+          rel="noopener noreferrer" aria-label="View project: Minimalism">
+          <figure class="portfolio-image" style="--bg:url('images/portfolio-1.jpg');">
+            <img src="images/portfolio-1.png" alt="Minimalism — Illustration and Art Direction project" loading="lazy"
+              decoding="async">
+          </figure>
           <div class="portfolio-overlay">
-            <h3>Minimalism</h3>
-            <span class="category">Illustration . Art Direction</span>
-            <a href="#" class="view-work-btn">View Work</a>
+            <h3>Portfolio</h3>
+            <span class="category">Web Portfolio · Frontend Development</span>
+            <span class="view-work-btn" aria-hidden="true">View Work</span>
           </div>
-        </div>
-        <!-- Portfolio Item 2 -->
-        <div class="portfolio-item fade-in stagger-2">
-          <div class="portfolio-image"></div>
+        </a>
+
+        <!-- Item 2 -->
+        <a class="portfolio-item fade-in stagger-2" href="https://creastein.github.io/" target="_blank"
+          rel="noopener noreferrer" aria-label="View project: Web Design">
+          <figure class="portfolio-image" style="--bg:url('images/portfolio-2.jpg');">
+            <img src="images/portfolio-2.jpg" alt="Web Design — Digital project" loading="lazy" decoding="async">
+          </figure>
           <div class="portfolio-overlay">
             <h3>Web Design</h3>
-            <span>Digital</span>
+            <span class="category">Digital</span>
+            <span class="view-work-btn" aria-hidden="true">View Work</span>
           </div>
-        </div>
-        <!-- Portfolio Item 3 -->
-        <div class="portfolio-item fade-in stagger-3">
-          <div class="portfolio-image"></div>
+        </a>
+
+        <!-- Item 3 -->
+        <a class="portfolio-item fade-in stagger-3" href="https://creastein.github.io/" target="_blank"
+          rel="noopener noreferrer" aria-label="View project: App Development">
+          <figure class="portfolio-image" style="--bg:url('images/portfolio-3.jpg');">
+            <img src="images/portfolio-3.jpg" alt="App Development — Mobile project" loading="lazy" decoding="async">
+          </figure>
           <div class="portfolio-overlay">
             <h3>App Development</h3>
-            <span>Mobile</span>
+            <span class="category">Mobile</span>
+            <span class="view-work-btn" aria-hidden="true">View Work</span>
           </div>
-        </div>
-        <!-- Portfolio Item 4 -->
-        <div class="portfolio-item fade-in stagger-4">
-          <div class="portfolio-image"></div>
+        </a>
+
+        <!-- Item 4 -->
+        <a class="portfolio-item fade-in stagger-4" href="https://creastein.github.io/" target="_blank"
+          rel="noopener noreferrer" aria-label="View project: Photography">
+          <figure class="portfolio-image" style="--bg:url('images/portfolio-4.jpg');">
+            <img src="images/portfolio-4.jpg" alt="Photography — Art project" loading="lazy" decoding="async">
+          </figure>
           <div class="portfolio-overlay">
             <h3>Photography</h3>
-            <span>Art</span>
+            <span class="category">Art</span>
+            <span class="view-work-btn" aria-hidden="true">View Work</span>
           </div>
-        </div>
-        <!-- Portfolio Item 5 -->
-        <div class="portfolio-item fade-in stagger-5">
-          <div class="portfolio-image"></div>
+        </a>
+
+        <!-- Item 5 -->
+        <a class="portfolio-item fade-in stagger-5" href="https://creastein.github.io/" target="_blank"
+          rel="noopener noreferrer" aria-label="View project: Social Media">
+          <figure class="portfolio-image" style="--bg:url('images/portfolio-5.jpg');">
+            <img src="images/portfolio-5.jpg" alt="Social Media — Marketing project" loading="lazy" decoding="async">
+          </figure>
           <div class="portfolio-overlay">
             <h3>Social Media</h3>
-            <span>Marketing</span>
+            <span class="category">Marketing</span>
+            <span class="view-work-btn" aria-hidden="true">View Work</span>
           </div>
-        </div>
-        <!-- Portfolio Item 6 -->
-        <div class="portfolio-item fade-in stagger-6">
-          <div class="portfolio-image"></div>
+        </a>
+
+        <!-- Item 6 -->
+        <a class="portfolio-item fade-in stagger-6" href="https://creastein.github.io/" target="_blank"
+          rel="noopener noreferrer" aria-label="View project: Print Design">
+          <figure class="portfolio-image" style="--bg:url('images/portfolio-6.jpg');">
+            <img src="images/portfolio-6.jpg" alt="Print Design — Print project" loading="lazy" decoding="async">
+          </figure>
           <div class="portfolio-overlay">
             <h3>Print Design</h3>
-            <span>Print</span>
+            <span class="category">Print</span>
+            <span class="view-work-btn" aria-hidden="true">View Work</span>
           </div>
-        </div>
+        </a>
       </div>
 
-      <div class="text-center mt-5">
-        <a href="#" class="btn btn-outline">View All Works</a>
+      <div class="works-cta">
+        <a href="https://creastein.github.io/" class="btn btn-outline" aria-label="View all works">View All Works</a>
       </div>
     </div>
   </section>
-
   <!-- Call to Action -->
   <section class="section cta-section">
     <div class="container">
@@ -422,7 +452,7 @@
     "jobTitle": ["Business Analyst", "Developer", "Solution Architect", "Product Engineer"],
     "description": "Business Analyst & Developer. Turning business ideas into simple and useful web experiences.",
     "sameAs": [
-      "www.linkedin.com/in/welli-",
+      "https://www.linkedin.com/in/welli-",
       "https://github.com/Creastein",
       "https://www.instagram.com/_well07/"
     ],
@@ -433,7 +463,7 @@
 
   <script type="application/ld+json">
   {
-    "@context": "httpqs://schema.org",
+    "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "WELLI Portfolio",
     "url": "https://welli.dev",

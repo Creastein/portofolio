@@ -432,11 +432,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Polyfill for requestIdleCallback
-window.requestIdleCallback = window.requestIdleCallback || function (cb) {
+window.requestIdleCallback = window.requestIdleCallback || function (cb, options) {
+  const start = Date.now();
+  const timeout = (options && options.timeout) || 1;
   return setTimeout(() => {
     cb({
       didTimeout: false,
       timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
     });
-  }, 1);
+  }, timeout);
 };

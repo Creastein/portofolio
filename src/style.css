@@ -1280,3 +1280,212 @@ body.loaded .hero-item.stagger-5 {
 }
 
 
+
+
+/* =========================================
+   WORKS SECTION STYLES (Moved from index.html)
+   ========================================= */
+
+/* Layout container fallback */
+.section.works .container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.section-header {
+  margin-bottom: 28px;
+}
+
+.section-title {
+  margin: 0 0 8px 0;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  line-height: 1.2;
+  color: #fff;
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.portfolio-item {
+  position: relative;
+  display: block;
+  grid-column: span 12;
+  text-decoration: none;
+  border-radius: 16px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #0c0c0c;
+  outline: none;
+}
+
+/* Responsive Grid: Mobile 1 | Tablet 2 | Desktop 3 */
+@media (min-width: 768px) {
+  .portfolio-item {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-item {
+    grid-column: span 4;
+  }
+}
+
+.portfolio-image {
+  position: relative;
+  width: 100%;
+  /* Aspect ratio to avoid layout shift */
+  aspect-ratio: 16 / 10;
+  /* Landscape */
+  background: #111;
+  /* Fallback color */
+  overflow: hidden;
+  /* Ensure image doesn't overflow rounded corners if any */
+}
+
+/* Zoom effect on hover */
+.portfolio-image img {
+  transition: transform 0.6s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.06);
+}
+
+/* Actual <img> for a11y/SEO - NOW VISIBLE */
+.portfolio-image>img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  /* Make visible */
+  pointer-events: none;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* Bottom alignment */
+  align-items: flex-start;
+  /* Left alignment */
+  text-align: left;
+  padding: 30px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background .3s ease, opacity .3s ease;
+  opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+  background: rgba(18, 10, 43, 0.75);
+  /* Darker purplish overlay from ref */
+  backdrop-filter: blur(2px);
+}
+
+.portfolio-overlay h3 {
+  margin: 0 0 10px 0;
+  font-family: var(--font-heading);
+  /* Serif font */
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay h3 {
+  transform: translateY(0);
+}
+
+.portfolio-overlay .category {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.15);
+  /* Pill bg */
+  padding: 8px 16px;
+  border-radius: 999px;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.1s;
+}
+
+.portfolio-item:hover .portfolio-overlay .category {
+  transform: translateY(0);
+}
+
+.view-work-btn {
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  /* Pill shape */
+  background: transparent;
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.2s, background 0.2s ease, border-color 0.2s ease;
+  opacity: 0;
+}
+
+.portfolio-item:hover .view-work-btn {
+  transform: translateY(0);
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+/* Keyboard focus visibility */
+.portfolio-item:focus-visible {
+  outline: 3px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* CTA */
+.works-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.btn.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .35);
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.btn.btn-outline:hover,
+.btn.btn-outline:focus-visible {
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .6);
+}
