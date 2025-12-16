@@ -412,9 +412,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== SERVICE WORKER CLEANUP =====
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function (registrations) {
-      for (let registration of registrations) {
+        for (let registration of registrations) {
         registration.unregister();
-        console.log('ServiceWorker unregistered');
+        if (!import.meta.env.PROD) console.log('ServiceWorker unregistered');
       }
     });
   }

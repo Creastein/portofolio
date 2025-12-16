@@ -1282,8 +1282,8 @@ var pJS = function(tag_id, params){
             if(xhr.status == 200){
               pJS.tmp.source_svg = data.currentTarget.response;
               pJS.fn.vendors.checkBeforeDraw();
-            }else{
-              console.log('Error pJS - Image not found');
+              }else{
+              // Image not found (silenced in production)
               pJS.tmp.img_error = true;
             }
           }
@@ -1302,7 +1302,7 @@ var pJS = function(tag_id, params){
       }
 
     }else{
-      console.log('Error pJS - No image.src');
+      // No image.src provided (silenced)
       pJS.tmp.img_error = true;
     }
 
@@ -1530,9 +1530,8 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
         var params = JSON.parse(data.currentTarget.response);
         window.particlesJS(tag_id, params);
         if(callback) callback();
-      }else{
-        console.log('Error pJS - XMLHttpRequest status: '+xhr.status);
-        console.log('Error pJS - File config not found');
+        }else{
+        // XMLHttpRequest error (silenced)
       }
     }
   };
