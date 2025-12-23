@@ -3,25 +3,22 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ===== LOADING SCREEN =====
-  const loader = document.getElementById('loader');
 
+  /* Loading Screen */
+  const loader = document.getElementById('loader');
   const hideLoader = () => {
     if (loader) {
       loader.classList.add('hidden');
       document.body.classList.add('loaded');
 
-      // Start typewriter after loader
       if (typeof initTypewriter === 'function') {
         setTimeout(initTypewriter, 500);
       }
     }
   };
-
-  // Hide loader after animation completes
   setTimeout(hideLoader, 1800);
 
-  // ===== CUSTOM CURSOR =====
+  /* Custom Cursor */
   const cursorDot = document.querySelector('.cursor-dot');
   const cursorOutline = document.querySelector('.cursor-outline');
 
@@ -33,12 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
       mouseX = e.clientX;
       mouseY = e.clientY;
 
-      // Dot follows immediately
       cursorDot.style.left = mouseX + 'px';
       cursorDot.style.top = mouseY + 'px';
     });
 
-    // Smooth outline follow
     const animateOutline = () => {
       outlineX += (mouseX - outlineX) * 0.15;
       outlineY += (mouseY - outlineY) * 0.15;
@@ -50,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     animateOutline();
 
-    // Hover effects on interactive elements
     const interactiveElements = document.querySelectorAll('a, button, input, .service-card, .portfolio-item');
 
     interactiveElements.forEach(el => {
@@ -65,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Click effects
     document.addEventListener('mousedown', () => {
       cursorDot.classList.add('clicking');
       cursorOutline.classList.add('clicking');
@@ -77,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== MAGNETIC BUTTONS =====
+  /* Magnetic Buttons */
   const magneticBtns = document.querySelectorAll('.magnetic-btn');
 
   magneticBtns.forEach(btn => {
@@ -94,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== PARTICLES.JS =====
+  /* Particles.js */
   if (typeof particlesJS !== 'undefined') {
     particlesJS('particles-js', {
       particles: {
@@ -182,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== PARALLAX SCROLLING =====
+  /* Parallax Scroling */
   const parallaxElements = document.querySelectorAll('[data-parallax]');
 
   const handleParallax = () => {
@@ -197,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', handleParallax, { passive: true });
 
-  // ===== SCROLL REVEAL ANIMATIONS =====
+  /* Scroll Reveal */
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -212,12 +205,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  // Observe all elements with fade-in class
   document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
   });
 
-  // ===== MOBILE MENU TOGGLE =====
+  /* Mobile Menu */
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navLinks = document.querySelector('.nav-links');
   const navbar = document.querySelector('.navbar');
@@ -229,12 +221,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== SMOOTH SCROLLING =====
+  /* Smooth Scrolling */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
 
-      // Close mobile menu if open
       if (navLinks && navLinks.classList.contains('active')) {
         navLinks.classList.remove('active');
         mobileToggle.classList.remove('active');
@@ -255,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== ACTIVE LINK HIGHLIGHTING =====
+  /* Active Link Highlighting */
   const sections = document.querySelectorAll('section');
   const navItems = document.querySelectorAll('.nav-links a');
 
@@ -277,7 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Navbar scrolled state
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
     } else {
@@ -285,62 +275,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ===== TILT EFFECT FOR CARDS (Key Performance Optimization) =====
+  /* Card Tilt Effect */
   if (window.matchMedia('(pointer: fine)').matches) {
     const cards = document.querySelectorAll('.service-card, .portfolio-item');
-    
+
     cards.forEach(card => {
       let ticking = false;
-      
+
       card.addEventListener('mousemove', (e) => {
         if (!ticking) {
           window.requestAnimationFrame(() => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
-            // Calculate rotation based on cursor position
-            // Center of card is 0,0
+
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            
-            // Max rotation deg
             const maxRotate = 10;
-            
-            const rotateX = ((y - centerY) / centerY) * -maxRotate; // Invert X for natural tilt
-            const rotateY = ((x - centerX) / centerX) * maxRotate; 
 
-            // Determine specific scale based on card type to match CSS
+            const rotateX = ((y - centerY) / centerY) * -maxRotate;
+            const rotateY = ((x - centerX) / centerX) * maxRotate;
+
             let scale = 1;
             let translateY = 0;
-            
+
             if (card.classList.contains('service-card')) {
               scale = 1.02;
-              translateY = -15; // Match CSS .service-card:hover
+              translateY = -15;
             } else if (card.classList.contains('portfolio-item')) {
-              scale = 1; // Portfolio item container doesn't scale, its image does
-              translateY = -5; // A slight lift for portfolio items
+              scale = 1;
+              translateY = -5;
             }
 
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale}) translateY(${translateY}px)`;
-            
+
             ticking = false;
           });
-          
+
           ticking = true;
         }
       });
 
       card.addEventListener('mouseleave', () => {
-        // Clear manual transform so CSS takes over (or reset to default)
         card.style.transform = '';
       });
     });
   }
 
-
-
-  // ===== LAZY LOADING FOR BACKGROUND IMAGES =====
+  /* Lazy Loading Backgrounds */
   const lazyBackgrounds = document.querySelectorAll('[data-bg]');
 
   if ('IntersectionObserver' in window) {
@@ -359,25 +341,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lazyBackgrounds.forEach(el => bgObserver.observe(el));
   } else {
-    // Fallback for browsers without IntersectionObserver
     lazyBackgrounds.forEach(el => {
       el.style.backgroundImage = `url(${el.dataset.bg})`;
     });
   }
 
-  // ===== SERVICE WORKER CLEANUP =====
+  /* Service Worker Cleanup */
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function (registrations) {
-        for (let registration of registrations) {
+      for (let registration of registrations) {
         registration.unregister();
-        if (!import.meta.env.PROD) console.log('ServiceWorker unregistered');
       }
     });
   }
 
-  // ===== PERFORMANCE: DEFER NON-CRITICAL OPERATIONS =====
+  /* Defer Non-critical Operations */
   requestIdleCallback(() => {
-    // Preload next sections' images
     const sections = document.querySelectorAll('section[data-preload]');
     sections.forEach(section => {
       const img = new Image();

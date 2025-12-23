@@ -656,7 +656,6 @@ body.loaded .hero-item.stagger-5 {
 .about-section {
   background: #000000;
   padding: 50px 0;
-  /* Reduced padding */
   overflow: hidden;
 }
 
@@ -664,7 +663,6 @@ body.loaded .hero-item.stagger-5 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  /* Remove gap for seamless blending */
   align-items: center;
 }
 
@@ -675,7 +673,6 @@ body.loaded .hero-item.stagger-5 {
 
 .about-image {
   position: relative;
-  /* Remove old card styles */
   border-radius: 0;
   box-shadow: none;
   height: 100%;
@@ -685,19 +682,12 @@ body.loaded .hero-item.stagger-5 {
 
 .about-image img {
   width: 60%;
-  /* Reduced width */
   height: auto;
   display: block;
-
-  /* Natural Colors (Removed Grayscale) */
   filter: none;
-
-  /* Mask to blend bottom edge (fade out) */
   -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-
   margin-left: auto;
-  /* Push to right */
 }
 
 /* Gradient overlay for extra blending if needed */
@@ -750,10 +740,8 @@ body.loaded .hero-item.stagger-5 {
 /* New Accent Button */
 .btn-accent {
   background: #ff4d4d;
-  /* Reddish pink from reference */
   color: var(--white);
   border-radius: 2px;
-  /* Sharper corners */
   padding: 15px 40px;
   font-size: 0.8rem;
   letter-spacing: 2px;
@@ -769,7 +757,6 @@ body.loaded .hero-item.stagger-5 {
 
 .btn-accent::before {
   display: none;
-  /* Remove gradient overlay from base btn */
 }
 
 /* Services Section */

@@ -4,11 +4,7 @@ export default defineConfig(({ mode }) => {
   // Load env file based on `mode` in the current working directory.
   const env = loadEnv(mode, process.cwd(), '')
 
-  // Determine base path:
-  // 1. If VERCEL is set, use '/' (root)
-  // 2. If GITHUB_ACTIONS is set (and not Vercel), use '/portofolio/' for GitHub Pages
-  // 3. Otherwise (Local dev), use '/'
-
+  // Determine base path for deployment (GitHub Pages vs Vercel/Root)
   let base = '/'
   if (process.env.GITHUB_ACTIONS === 'true' && process.env.VERCEL !== '1') {
     base = '/portofolio/'
@@ -20,10 +16,9 @@ export default defineConfig(({ mode }) => {
     assetsInclude: ['**/*.png', '**/*.json'],
     build: {
       outDir: 'dist',
-      sourcemap: false, // Disable sourcemaps untuk production
+      sourcemap: false,
       rollupOptions: {
         output: {
-          // Optimalkan output bundle
           manualChunks: undefined,
         }
       }
