@@ -285,99 +285,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ===== ENHANCED HOVER EFFECTS =====
-  const serviceCards = document.querySelectorAll('.service-card');
-  serviceCards.forEach(card => {
-    card.addEventListener('mouseenter', function () {
-      this.style.transform = 'translateY(-15px) scale(1.02)';
-    });
-
-    card.addEventListener('mouseleave', function () {
-      this.style.transform = 'translateY(0) scale(1)';
-    });
-  });
-
-  // Portfolio item effects
-  const portfolioItems = document.querySelectorAll('.portfolio-item');
-  portfolioItems.forEach(item => {
-    item.addEventListener('click', function () {
-      this.style.transform = 'scale(0.98)';
-      setTimeout(() => {
-        this.style.transform = 'scale(1)';
-      }, 100);
-    });
-  });
-
-  // ===== TYPEWRITER EFFECT =====
-  function initTypewriter() {
-    const typewriterElement = document.querySelector('.typewriter-text');
-    if (typewriterElement) {
-      const phrases = JSON.parse(typewriterElement.getAttribute('data-text'));
-      let phraseIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      let typeSpeed = 100;
-
-      function type() {
-        const currentPhrase = phrases[phraseIndex];
-
-        if (isDeleting) {
-          typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
-          charIndex--;
-          typeSpeed = 50;
-        } else {
-          typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
-          charIndex++;
-          typeSpeed = 100;
-        }
-
-        if (!isDeleting && charIndex === currentPhrase.length) {
-          isDeleting = true;
-          typeSpeed = 2000;
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length;
-          typeSpeed = 500;
-        }
-
-        setTimeout(type, typeSpeed);
-      }
-
-      type();
-    }
-  }
-
-  // ===== SMOOTH SCROLL INDICATOR =====
-  const scrollDown = document.querySelector('.scroll-down a');
-  if (scrollDown) {
-    scrollDown.addEventListener('mouseenter', function () {
-      this.querySelector('span').style.animationPlayState = 'paused';
-    });
-
-    scrollDown.addEventListener('mouseleave', function () {
-      this.querySelector('span').style.animationPlayState = 'running';
-    });
-  }
-
-  // ===== TILT EFFECT FOR CARDS (Optional Performance Enhancement) =====
+  // ===== TILT EFFECT FOR CARDS (Key Performance Optimization) =====
   if (window.matchMedia('(pointer: fine)').matches) {
     const cards = document.querySelectorAll('.service-card, .portfolio-item');
-
+    
     cards.forEach(card => {
+      let ticking = false;
+      
       card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Calculate rotation based on cursor position
+            // Center of card is 0,0
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Max rotation deg
+            const maxRotate = 10;
+            
+            const rotateX = ((y - centerY) / centerY) * -maxRotate; // Invert X for natural tilt
+            const rotateY = ((x - centerX) / centerX) * maxRotate; 
 
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+            // Determine specific scale based on card type to match CSS
+            let scale = 1;
+            let translateY = 0;
+            
+            if (card.classList.contains('service-card')) {
+              scale = 1.02;
+              translateY = -15; // Match CSS .service-card:hover
+            } else if (card.classList.contains('portfolio-item')) {
+              scale = 1; // Portfolio item container doesn't scale, its image does
+              translateY = -5; // A slight lift for portfolio items
+            }
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale}) translateY(${translateY}px)`;
+            
+            ticking = false;
+          });
+          
+          ticking = true;
+        }
       });
 
       card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        // Clear manual transform so CSS takes over (or reset to default)
+        card.style.transform = '';
       });
     });
   }

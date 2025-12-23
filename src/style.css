@@ -812,7 +812,7 @@ body.loaded .hero-item.stagger-5 {
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-15px) scale(1.02);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   border-color: rgba(102, 126, 234, 0.5);
 }
@@ -1161,7 +1161,9 @@ body.loaded .hero-item.stagger-5 {
   .section {
     padding: 80px 0;
   }
-}/* CSS for Latest Project Design */
+}
+
+/* CSS for Latest Project Design */
 
 
 
@@ -1171,15 +1173,15 @@ body.loaded .hero-item.stagger-5 {
 
 .section-header h2 {
 
-    font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
 
-    /* Match screenshot style */
+  /* Match screenshot style */
 
-    text-transform: capitalize;
+  text-transform: capitalize;
 
-    /* "Latest Project" or Title Case */
+  /* "Latest Project" or Title Case */
 
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 
 }
 
@@ -1189,23 +1191,23 @@ body.loaded .hero-item.stagger-5 {
 
 .portfolio-item.featured-style .portfolio-overlay {
 
-    opacity: 1;
+  opacity: 1;
 
-    /* Always visible or specific style */
+  /* Always visible or specific style */
 
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
 
-    align-items: flex-start;
+  align-items: flex-start;
 
-    /* Align text to left */
+  /* Align text to left */
 
-    justify-content: flex-end;
+  justify-content: flex-end;
 
-    /* Align text to bottom */
+  /* Align text to bottom */
 
-    padding: 30px;
+  padding: 30px;
 
-    text-align: left;
+  text-align: left;
 
 }
 
@@ -1213,13 +1215,13 @@ body.loaded .hero-item.stagger-5 {
 
 .portfolio-item.featured-style h3 {
 
-    font-size: 2rem;
+  font-size: 2rem;
 
-    font-weight: 700;
+  font-weight: 700;
 
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 
-    transform: translateY(0);
+  transform: translateY(0);
 
 }
 
@@ -1227,13 +1229,13 @@ body.loaded .hero-item.stagger-5 {
 
 .portfolio-item.featured-style .category {
 
-    color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 
-    font-size: 1rem;
+  font-size: 1rem;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    display: block;
+  display: block;
 
 }
 
@@ -1241,31 +1243,31 @@ body.loaded .hero-item.stagger-5 {
 
 .view-work-btn {
 
-    display: inline-block;
+  display: inline-block;
 
-    color: #fff;
+  color: #fff;
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 
-    padding: 10px 20px;
+  padding: 10px 20px;
 
-    background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 
-    border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    opacity: 1;
+  opacity: 1;
 
-    /* Make button visible */
+  /* Make button visible */
 
-    margin-top: 10px;
+  margin-top: 10px;
 
 }
 
@@ -1273,9 +1275,9 @@ body.loaded .hero-item.stagger-5 {
 
 .view-work-btn:hover {
 
-    background: #fff;
+  background: #fff;
 
-    color: #000;
+  color: #000;
 
 }
 
@@ -1488,4 +1490,44 @@ body.loaded .hero-item.stagger-5 {
 .btn.btn-outline:focus-visible {
   background: rgba(255, 255, 255, .06);
   border-color: rgba(255, 255, 255, .6);
+}
+
+.about-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  padding: 15px 40px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: var(--white);
+  color: var(--black, #000);
+  border-color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 500px) {
+  .about-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .about-actions .btn {
+    text-align: center;
+  }
 }
