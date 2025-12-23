@@ -1518,3 +1518,241 @@ body.loaded .hero-item.stagger-5 {
     text-align: center;
   }
 }
+
+/* Skills Section */
+.skills-section {
+  padding: 100px 0;
+  background: var(--bg-dark);
+  /* Pure black as requested */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  /* Dark card background */
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-gradient);
+  opacity: 0.7;
+}
+
+/* Specific Card Layouts */
+.frontend {
+  grid-column: 1 / -1;
+  /* Full width top */
+}
+
+.analysis {
+  grid-column: 1 / 2;
+  /* 1/3 width on desktop */
+}
+
+.multimedia {
+  grid-column: 2 / 3;
+}
+
+.office {
+  grid-column: 3 / 4;
+}
+
+@media (max-width: 900px) {
+
+  .analysis,
+  .multimedia,
+  .office {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .frontend,
+  .analysis,
+  .multimedia,
+  .office {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Headers */
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 15px;
+}
+
+.skill-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 0;
+}
+
+.accent-icon {
+  font-size: 1.5rem;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Skill Tiles (Grid for Icons) */
+.skills-tiles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.skill-tile {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.03);
+  /* Very dark background */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: var(--text-gray);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  cursor: pointer;
+}
+
+.skill-tile:hover {
+  background: rgba(255, 255, 255, 0.08);
+  /* Slightly lighter on hover */
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tooltip on Hover */
+.skill-tile::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.skill-tile:hover::after {
+  opacity: 1;
+}
+
+/* Analysis List (Kept as list for readability) */
+.analysis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.analysis-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.analysis-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--white);
+}
+
+.analysis-item i {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  width: 30px;
+  text-align: center;
+}
+
+/* Brand Colors for Icons in Tiles */
+/* Note: We now use IMG tags with Simple Icons CDN which serves the brand color automatically */
+/* Exception: GitHub, OBS, CapCut where we requested /white in the URL */
+
+/* Image Icons Style */
+.skill-icon-img {
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.skill-tile:hover .skill-icon-img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Analysis Colors (Still using FontAwesome) */
+.analysis-item i.fa-search {
+  color: #4FC3F7;
+}
+
+.analysis-item i.fa-share-alt {
+  color: #81C784;
+}
+
+.analysis-item i.fa-database {
+  color: #FFB74D;
+}
+
+.analysis-item i.fa-file-alt {
+  color: #E0E0E0;
+}
+
+/* Adjust Service Section background to alternate */
+.services-section {
+  background: var(--bg-dark);
+  /* Pure black */
+}
