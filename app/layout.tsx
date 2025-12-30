@@ -22,28 +22,30 @@ const oswald = Oswald({
   display: "swap",
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const metadata: Metadata = {
   title: "WELLI | Business Analyst & Developer Portfolio",
   description: "WELLI - Business Analyst & Developer. Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.",
   keywords: "Business Analyst, Developer, Solution Architect, Product Engineer, Web Development, Portfolio, UI/UX Design",
   authors: [{ name: "WELLI" }],
   icons: {
-    icon: "/portofolio/images/logo.png",
-    apple: "/portofolio/images/logo.png",
+    icon: `${basePath}/images/logo.png`,
+    apple: `${basePath}/images/logo.png`,
   },
   openGraph: {
     type: "website",
     url: "https://welli.dev/",
     title: "WELLI | Business Analyst & Developer Portfolio",
     description: "Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.",
-    images: ["/portofolio/images/logo.png"],
+    images: [`${basePath}/images/logo.png`],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "WELLI | Business Analyst & Developer Portfolio",
     description: "Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.",
-    images: ["/portofolio/images/logo.png"],
+    images: [`${basePath}/images/logo.png`],
   },
 };
 

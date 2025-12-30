@@ -76,27 +76,27 @@ export default function ServicesSection() {
         {
             title: "Business & System Analysis",
             description: "Analyze business processes, identify problems, and translate requirements into clear system and feature definitions.",
-            icon: "/portofolio/icons/bar-chart-2.svg"
+            icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icons/bar-chart-2.svg`
         },
         {
             title: "Frontend Web Development",
             description: "Build clean, responsive, and user-friendly web interfaces using modern frontend technologies.",
-            icon: "/portofolio/icons/code.svg"
+            icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icons/code.svg`
         },
         {
             title: "UI Implementation from Requirements",
             description: "Turn business and user requirements into practical, intuitive, and functional user interfaces.",
-            icon: "/portofolio/icons/layers.svg"
+            icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icons/layers.svg`
         },
         {
             title: "System & Feature Design",
             description: "Design system flows, page structures, and features that align with real business goals.",
-            icon: "/portofolio/icons/git-branch.svg"
+            icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icons/git-branch.svg`
         },
         {
             title: "Website for Small Business & Personal Use",
             description: "Create simple and effective websites tailored for small businesses and personal portfolios.",
-            icon: "/portofolio/icons/globe.svg"
+            icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icons/globe.svg`
         }
     ];
 
