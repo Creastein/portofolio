@@ -543,7 +543,7 @@ export default function Home() {
             </a>
 
             {/* Item 3 */}
-            <a className="portfolio-item fade-in stagger-3" href="#" target="_blank" rel="noopener noreferrer" aria-label="View project: Villa Utamaro">
+            <a className="portfolio-item fade-in stagger-3" href="https://villa-utamaro.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: Villa Utamaro">
               <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/VillaUtamaro.png')` } as any}>
                 <img src={`${basePath}/images/VillaUtamaro.png`} alt="Villa Utamaro — Luxury Villa Website" loading="lazy" decoding="async" />
               </figure>
