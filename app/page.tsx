@@ -196,6 +196,14 @@ export default function Home() {
       mobileToggle.addEventListener('click', toggleMenu);
     }
 
+    navItems.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks && navLinks.classList.contains('active')) {
+          toggleMenu();
+        }
+      });
+    });
+
     const sections = document.querySelectorAll('section');
     const navItems = document.querySelectorAll('.nav-links a');
 
