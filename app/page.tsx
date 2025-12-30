@@ -184,6 +184,8 @@ export default function Home() {
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
     const navbar = document.querySelector('.navbar');
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-links a');
 
     const toggleMenu = () => {
       if (navLinks && mobileToggle) {
@@ -203,9 +205,6 @@ export default function Home() {
         }
       });
     });
-
-    const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('.nav-links a');
 
     const onScroll = () => {
       let current = '';
