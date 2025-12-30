@@ -20,10 +20,8 @@ const ServiceCard = ({ title, description, icon, index }: ServiceCardProps) => {
         const rect = cardRef.current.getBoundingClientRect();
         const x = ((e.clientX - rect.left) / rect.width) * 100;
         const y = ((e.clientY - rect.top) / rect.height) * 100;
-
         setMousePos({ x, y });
 
-        // 3D Tilt
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
         const deltaX = (e.clientX - centerX) / (rect.width / 2);

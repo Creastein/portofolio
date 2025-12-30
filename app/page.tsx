@@ -10,9 +10,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
-  // Logic from main.js converted to hooks
   useEffect(() => {
-    // Loader Logic
     const loader = document.getElementById('loader');
     const hideLoader = () => {
       if (loader) {
@@ -22,17 +20,13 @@ export default function Home() {
       }
     };
 
-    // Initial timeout for loader
     const timer = setTimeout(hideLoader, 500);
-
     return () => clearTimeout(timer);
   }, []);
 
-  // Typewriter Effect (runs after loading)
   useEffect(() => {
     if (loading) return;
 
-    // Typewriter Logic from main.js
     const initTypewriter = () => {
       const textElement = document.querySelector('.typewriter-text');
       if (!textElement) return;
@@ -83,9 +77,7 @@ export default function Home() {
 
   }, [loading]);
 
-  // General Effects (Scroll, Cursor, Parallax, etc.)
   useEffect(() => {
-    /* Custom Cursor */
     const cursorDot = document.querySelector('.cursor-dot') as HTMLElement;
     const cursorOutline = document.querySelector('.cursor-outline') as HTMLElement;
 
@@ -139,7 +131,6 @@ export default function Home() {
       });
     }
 
-    /* Magnetic Buttons */
     const magneticBtns = document.querySelectorAll('.magnetic-btn');
 
     magneticBtns.forEach(btn => {
@@ -157,7 +148,6 @@ export default function Home() {
       });
     });
 
-    /* Parallax Scroling */
     const parallaxElements = document.querySelectorAll('[data-parallax]');
 
     const handleParallax = () => {
@@ -173,7 +163,6 @@ export default function Home() {
 
     window.addEventListener('scroll', handleParallax, { passive: true });
 
-    /* Scroll Reveal */
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -192,7 +181,6 @@ export default function Home() {
       observer.observe(el);
     });
 
-    /* Mobile Menu */
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
     const navbar = document.querySelector('.navbar');
@@ -208,7 +196,6 @@ export default function Home() {
       mobileToggle.addEventListener('click', toggleMenu);
     }
 
-    /* Active Link Highlighting */
     const sections = document.querySelectorAll('section');
     const navItems = document.querySelectorAll('.nav-links a');
 
@@ -239,7 +226,6 @@ export default function Home() {
 
     window.addEventListener('scroll', onScroll);
 
-    /* Card Tilt Effect */
     if (window.matchMedia('(pointer: fine)').matches) {
       const cards = document.querySelectorAll('.service-card, .portfolio-item');
 
