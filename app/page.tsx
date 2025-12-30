@@ -336,7 +336,7 @@ export default function Home() {
       <nav className="navbar">
         <div className="container nav-container">
           <a href="#home" className="logo">
-            <img src="/images/logo.png" alt="WELLI Logo" width="120" height="auto" />
+            <img src="/portofolio/images/logo.png" alt="WELLI Logo" width="120" height="auto" />
           </a>
           <button className="mobile-toggle" aria-label="Toggle navigation">
             <span></span>
@@ -400,7 +400,7 @@ export default function Home() {
             <div className="about-image fade-in stagger-1">
               <div className="image-overlay-gradient"></div>
               {/* User's Stylish B&W Portrait */}
-              <img src="/images/about-me.png" alt="WELLI - Business Analyst and Developer Portrait" loading="lazy" decoding="async" />
+              <img src="/portofolio/images/about-me.png" alt="WELLI - Business Analyst and Developer Portrait" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -532,8 +532,8 @@ export default function Home() {
           <div className="portfolio-grid">
             {/* Item 1 */}
             <a className="portfolio-item fade-in stagger-1" href="https://creastein.github.io/portofolio" target="_blank" rel="noopener noreferrer" aria-label="View project: Portfolio">
-              <figure className="portfolio-image" style={{ '--bg': "url('/images/portofolio.png')" } as any}>
-                <img src="/images/portofolio.png" alt="Portfolio — Personal Portfolio Website" loading="lazy" decoding="async" />
+              <figure className="portfolio-image" style={{ '--bg': "url('/portofolio/images/portofolio.png')" } as any}>
+                <img src="/portofolio/images/portofolio.png" alt="Portfolio — Personal Portfolio Website" loading="lazy" decoding="async" />
               </figure>
               <div className="portfolio-overlay">
                 <h3>Portfolio</h3>
@@ -544,8 +544,8 @@ export default function Home() {
 
             {/* Item 2 */}
             <a className="portfolio-item fade-in stagger-2" href="https://dancing-mountain-villa.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: Dancing Mountain Villa">
-              <figure className="portfolio-image" style={{ '--bg': "url('/images/dancingmountainvilla.png')" } as any}>
-                <img src="/images/dancingmountainvilla.png" alt="Dancing Mountain Villa — Villa Rental Website" loading="lazy" decoding="async" />
+              <figure className="portfolio-image" style={{ '--bg': "url('/portofolio/images/dancingmountainvilla.png')" } as any}>
+                <img src="/portofolio/images/dancingmountainvilla.png" alt="Dancing Mountain Villa — Villa Rental Website" loading="lazy" decoding="async" />
               </figure>
               <div className="portfolio-overlay">
                 <h3>Dancing Mountain Villa</h3>
@@ -556,8 +556,8 @@ export default function Home() {
 
             {/* Item 3 */}
             <a className="portfolio-item fade-in stagger-3" href="#" target="_blank" rel="noopener noreferrer" aria-label="View project: Villa Utamaro">
-              <figure className="portfolio-image" style={{ '--bg': "url('/images/VillaUtamaro.png')" } as any}>
-                <img src="/images/VillaUtamaro.png" alt="Villa Utamaro — Luxury Villa Website" loading="lazy" decoding="async" />
+              <figure className="portfolio-image" style={{ '--bg': "url('/portofolio/images/VillaUtamaro.png')" } as any}>
+                <img src="/portofolio/images/VillaUtamaro.png" alt="Villa Utamaro — Luxury Villa Website" loading="lazy" decoding="async" />
               </figure>
               <div className="portfolio-overlay">
                 <h3>Villa Utamaro</h3>
@@ -568,8 +568,8 @@ export default function Home() {
 
             {/* Item 4 */}
             <a className="portfolio-item fade-in stagger-4" href="#" target="_blank" rel="noopener noreferrer" aria-label="View project: Gereja JHB Salatiga">
-              <figure className="portfolio-image" style={{ '--bg': "url('/images/GerejaJHBSalatiga.png')" } as any}>
-                <img src="/images/GerejaJHBSalatiga.png" alt="Gereja JHB Salatiga — Church Website" loading="lazy" decoding="async" />
+              <figure className="portfolio-image" style={{ '--bg': "url('/portofolio/images/GerejaJHBSalatiga.png')" } as any}>
+                <img src="/portofolio/images/GerejaJHBSalatiga.png" alt="Gereja JHB Salatiga — Church Website" loading="lazy" decoding="async" />
               </figure>
               <div className="portfolio-overlay">
                 <h3>Gereja JHB Salatiga</h3>
@@ -580,8 +580,8 @@ export default function Home() {
 
             {/* Item 5 */}
             <a className="portfolio-item fade-in stagger-5" href="#" target="_blank" rel="noopener noreferrer" aria-label="View project: Finance Dashboard">
-              <figure className="portfolio-image" style={{ '--bg': "url('/images/FinanceAnalyticsDashboard.png')" } as any}>
-                <img src="/images/FinanceAnalyticsDashboard.png" alt="Finance Analytics Dashboard — Data Visualization" loading="lazy" decoding="async" />
+              <figure className="portfolio-image" style={{ '--bg': "url('/portofolio/images/FinanceAnalyticsDashboard.png')" } as any}>
+                <img src="/portofolio/images/FinanceAnalyticsDashboard.png" alt="Finance Analytics Dashboard — Data Visualization" loading="lazy" decoding="async" />
               </figure>
               <div className="portfolio-overlay">
                 <h3>Finance Dashboard</h3>
@@ -592,8 +592,8 @@ export default function Home() {
 
             {/* Item 6 */}
             <a className="portfolio-item fade-in stagger-6" href="#" target="_blank" rel="noopener noreferrer" aria-label="View project: E-commerce Landing Page">
-              <figure className="portfolio-image" style={{ '--bg': "url('/images/E-commerceSaaSLandingPage.png')" } as any}>
-                <img src="/images/E-commerceSaaSLandingPage.png" alt="E-commerce Landing Page — SaaS Website" loading="lazy" decoding="async" />
+              <figure className="portfolio-image" style={{ '--bg': "url('/portofolio/images/E-commerceSaaSLandingPage.png')" } as any}>
+                <img src="/portofolio/images/E-commerceSaaSLandingPage.png" alt="E-commerce Landing Page — SaaS Website" loading="lazy" decoding="async" />
               </figure>
               <div className="portfolio-overlay">
                 <h3>E-commerce / SaaS</h3>
