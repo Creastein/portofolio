@@ -4,24 +4,20 @@ import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Script from 'next/script';
 import ServicesSection from './components/ServicesSection';
+import LoadingScreen from './components/LoadingScreen';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const loader = document.getElementById('loader');
-    const hideLoader = () => {
-      if (loader) {
-        loader.classList.add('hidden');
-        document.body.classList.add('loaded');
-        setLoading(false);
-      }
-    };
+  const handleLoadingComplete = () => {
+    setLoading(false);
+    document.body.classList.add('loaded');
+  };
 
-    const timer = setTimeout(hideLoader, 500);
-    return () => clearTimeout(timer);
+  useEffect(() => {
+    // Removed old loader logic - now handled by LoadingScreen component
   }, []);
 
   useEffect(() => {
@@ -314,14 +310,7 @@ export default function Home() {
       />
 
       {/* Loading Screen */}
-      <div id="loader" className={`loader ${loading ? '' : 'hidden'}`}>
-        <div className="loader-content">
-          <div className="loader-logo">WELLI<span className="accent">.</span></div>
-          <div className="loader-bar">
-            <div className="loader-progress"></div>
-          </div>
-        </div>
-      </div>
+      <LoadingScreen isLoading={loading} onLoadingComplete={handleLoadingComplete} />
 
       {/* Custom Cursor */}
       <div className="cursor-dot"></div>
