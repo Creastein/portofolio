@@ -25,6 +25,7 @@ const oswald = Oswald({
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://welli.my.id'),
   title: "WELLI | Business Analyst & Developer Portfolio",
   description: "WELLI - Business Analyst & Developer. Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.",
   keywords: "Business Analyst, Developer, Solution Architect, Product Engineer, Web Development, Portfolio, UI/UX Design",
@@ -35,17 +36,32 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://welli.dev/",
+    url: "https://welli.my.id/",
     title: "WELLI | Business Analyst & Developer Portfolio",
     description: "Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.",
     images: [`${basePath}/images/logo.png`],
     locale: "en_US",
+    siteName: "WELLI Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "WELLI | Business Analyst & Developer Portfolio",
     description: "Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.",
     images: [`${basePath}/images/logo.png`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://welli.my.id',
   },
 };
 
