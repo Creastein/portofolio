@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display, Oswald } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
 
@@ -62,6 +63,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased font-sans">
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
