@@ -28,8 +28,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 export const metadata: Metadata = {
   metadataBase: new URL('https://welli.my.id'),
   title: "WELLI | Business Analyst & Developer Portfolio",
-  description: "WELLI - Business Analyst & Developer. Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.",
-  keywords: "Business Analyst, Developer, Solution Architect, Product Engineer, Web Development, Portfolio, UI/UX Design",
+  description: "WELLI - Business Analyst & Developer. Web & System Analyst & Product Engineer. Turning business ideas into simple and useful web experiences.",
+  keywords: "Business Analyst, Developer, Web & System Analyst, Product Engineer, Web Development, Portfolio, UI/UX Design",
   authors: [{ name: "WELLI" }],
   icons: {
     icon: `${basePath}/images/logo.png`,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://welli.my.id/",
     title: "WELLI | Business Analyst & Developer Portfolio",
-    description: "Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.",
+    description: "Web & System Analyst & Product Engineer. Turning business ideas into simple and useful web experiences.",
     images: [`${basePath}/images/logo.png`],
     locale: "en_US",
     siteName: "WELLI Portfolio",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "WELLI | Business Analyst & Developer Portfolio",
-    description: "Solution Architect & Product Engineer. Turning business ideas into simple and useful web experiences.",
+    description: "Web & System Analyst & Product Engineer. Turning business ideas into simple and useful web experiences.",
     images: [`${basePath}/images/logo.png`],
   },
   robots: {

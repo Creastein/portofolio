@@ -345,7 +345,7 @@ export default function Home() {
         <div className="container hero-content">
           <span className="subtitle hero-item stagger-1">BUSINESS ANALYST & DEVELOPER</span>
           <h1 className="hero-item stagger-2">
-            <span className="typewriter-text" data-text='["SOLUTION ARCHITECT", "PRODUCT ENGINEER"]'></span><span className="cursor">|</span>
+            <span className="typewriter-text" data-text='["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"]'></span><span className="cursor">|</span>
           </h1>
           <p className="hero-item stagger-3">I help turn business ideas into simple<br />and useful web experiences.</p>
 
