@@ -377,7 +377,7 @@ export default function Home() {
 
                 <div className="about-actions mt-4">
                   <a href="#works" className="btn btn-accent">SEE MY WORK</a>
-                  <a href="https://drive.google.com/file/d/1uscGnRDqBqJEf371elH8P5-FdFHGdj9K/view?usp=drive_link" target="_blank" className="btn btn-glitch" data-text="CHECK MY CV">CHECK MY CV</a>
+                  <a href="https://drive.google.com/file/d/1xRCIwlYaiQf54mUorn8-TAfmTBL_MXBq/view?usp=sharing" target="_blank" className="btn btn-glitch" data-text="CHECK MY CV">CHECK MY CV</a>
                 </div>
               </div>
             </div>
