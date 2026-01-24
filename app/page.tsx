@@ -514,6 +514,29 @@ export default function Home() {
           </header>
 
           <div className="portfolio-grid">
+            {/* Item New 1: IDX Trading Assistant */}
+            <a className="portfolio-item fade-in stagger-1" href="https://idx-trading-assistant.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: IDX Trading Assistant">
+              <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/IDX-Trading-Assistant.png')` } as any}>
+                <img src={`${basePath}/images/IDX-Trading-Assistant.png`} alt="IDX Trading Assistant — AI-Driven Financial Terminal" loading="lazy" decoding="async" />
+              </figure>
+              <div className="portfolio-overlay">
+                <h3>IDX Trading Assistant</h3>
+                <span className="category">AI Financial Terminal · Next.js</span>
+                <span className="view-work-btn" aria-hidden="true">View Work</span>
+              </div>
+            </a>
+
+            {/* Item New 2: Luxury Villa Website */}
+            <a className="portfolio-item fade-in stagger-2" href="https://luxury-villa-website.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: Luxury Villa Website">
+              <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/luxury_villa_website.png')` } as any}>
+                <img src={`${basePath}/images/luxury_villa_website.png`} alt="Luxury Villa Website — High-Conversion Digital Storefront" loading="lazy" decoding="async" />
+              </figure>
+              <div className="portfolio-overlay">
+                <h3>Luxury Villa Website</h3>
+                <span className="category">Real Estate · High-End UI</span>
+                <span className="view-work-btn" aria-hidden="true">View Work</span>
+              </div>
+            </a>
             {/* Item 1 */}
             <a className="portfolio-item fade-in stagger-1" href="https://creastein.github.io/portofolio" target="_blank" rel="noopener noreferrer" aria-label="View project: Portfolio">
               <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/portofolio.png')` } as any}>
