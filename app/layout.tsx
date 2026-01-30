@@ -3,6 +3,7 @@ import { Poppins, Playfair_Display, Oswald } from "next/font/google";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import BackToTop from "./components/BackToTop";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -80,6 +81,7 @@ export default function RootLayout({
       <body className="antialiased font-sans">
         <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
         {children}
+        <BackToTop />
       </body>
     </html>
   );
