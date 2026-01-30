@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Script from 'next/script';
 import ServicesSection from './components/ServicesSection';
 import LoadingScreen from './components/LoadingScreen';
+import BackToTop from './components/BackToTop';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -642,6 +643,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <BackToTop />
     </>
   );
 }
