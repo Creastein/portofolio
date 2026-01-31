@@ -2098,3 +2098,25 @@ body.loaded .hero-item.stagger-5 {
     transform: translate(0);
   }
 }
+
+/* Skip to Content Link */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 12px 24px;
+  z-index: 10002;
+  transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0 0 8px 8px;
+  box-shadow: var(--shadow-md);
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--white);
+  outline-offset: -4px;
+}

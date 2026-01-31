@@ -283,6 +283,8 @@ export default function Home() {
 
   return (
     <>
+      <a href="#main-content" className="skip-link">Skip to content</a>
+
       <Script
         src="/particles.js"
         onLoad={() => {
@@ -338,291 +340,293 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="hero-section" data-parallax="0.5" style={{ backgroundImage: `url('${basePath}/images/hero-bg.png')` }}>
-        <div id="particles-js"></div>
-        <div className="hero-overlay"></div>
-        <div className="container hero-content">
-          <span className="subtitle hero-item stagger-1">BUSINESS ANALYST & DEVELOPER</span>
-          <h1 className="hero-item stagger-2">
-            <span className="typewriter-text" data-text='["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"]'></span><span className="cursor">|</span>
-          </h1>
-          <p className="hero-item stagger-3">I help turn business ideas into simple<br />and useful web experiences.</p>
+      <main id="main-content" tabIndex={-1}>
+        {/* Hero Section */}
+        <section id="home" className="hero-section" data-parallax="0.5" style={{ backgroundImage: `url('${basePath}/images/hero-bg.png')` }}>
+          <div id="particles-js"></div>
+          <div className="hero-overlay"></div>
+          <div className="container hero-content">
+            <span className="subtitle hero-item stagger-1">BUSINESS ANALYST & DEVELOPER</span>
+            <h1 className="hero-item stagger-2">
+              <span className="typewriter-text" data-text='["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"]'></span><span className="cursor">|</span>
+            </h1>
+            <p className="hero-item stagger-3">I help turn business ideas into simple<br />and useful web experiences.</p>
 
-          <div className="social-icons hero-item stagger-4">
-            <a href="https://github.com/Creastein" className="magnetic-btn" target="_blank" aria-label="GitHub"><i className="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/welli-" className="magnetic-btn" target="_blank" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/_well07/" className="magnetic-btn" target="_blank" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-            <a href="https://wa.me/085161507114" className="magnetic-btn" target="_blank" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
-          </div>
-
-          <div className="scroll-down hero-item stagger-5">
-            <a href="#about">SCROLL DOWN <span></span></a>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="section about-section">
-        <div className="container">
-          <div className="about-grid">
-            <div className="about-content-wrapper fade-in stagger-2">
-              <div className="section-header text-left">
-                <h2>ABOUT ME</h2>
-              </div>
-              <div className="about-text">
-                <p className="lead">I’m a Business Analyst with a background in Information Systems.</p>
-                <p>I focus on translating business needs into clear, structured solutions.</p>
-                <p>With hands-on frontend experience, I’m able to validate ideas quickly, communicate effectively with developers, and ensure solutions stay aligned with user and business goals.</p>
-
-                <div className="about-actions mt-4">
-                  <a href="#works" className="btn btn-accent">SEE MY WORK</a>
-                  <a href="https://drive.google.com/file/d/1xRCIwlYaiQf54mUorn8-TAfmTBL_MXBq/view?usp=sharing" target="_blank" className="btn btn-glitch" data-text="CHECK MY CV">CHECK MY CV</a>
-                </div>
-              </div>
+            <div className="social-icons hero-item stagger-4">
+              <a href="https://github.com/Creastein" className="magnetic-btn" target="_blank" aria-label="GitHub"><i className="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/welli-" className="magnetic-btn" target="_blank" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/_well07/" className="magnetic-btn" target="_blank" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+              <a href="https://wa.me/085161507114" className="magnetic-btn" target="_blank" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
             </div>
-            <div className="about-image fade-in stagger-1">
-              <div className="image-overlay-gradient"></div>
-              {/* User's Stylish B&W Portrait */}
-              <img src={`${basePath}/images/about-me.png`} alt="WELLI - Business Analyst and Developer Portrait" loading="lazy" decoding="async" />
+
+            <div className="scroll-down hero-item stagger-5">
+              <a href="#about">SCROLL DOWN <span></span></a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="section skills-section bg-light">
-        <div className="container">
-          <div className="section-header fade-in">
-            <h2>My Skills</h2>
-            <div className="skills-grid">
-              {/* Frontend Development (Large Card) */}
-              <div className="skill-card frontend fade-in stagger-1">
-                <div className="skill-header">
-                  <i className="fas fa-code accent-icon"></i>
-                  <h3>Frontend Development</h3>
+        {/* About Section */}
+        <section id="about" className="section about-section">
+          <div className="container">
+            <div className="about-grid">
+              <div className="about-content-wrapper fade-in stagger-2">
+                <div className="section-header text-left">
+                  <h2>ABOUT ME</h2>
                 </div>
-                <div className="skills-tiles-grid">
-                  <div className="skill-tile" title="HTML5">
-                    <img src="https://cdn.simpleicons.org/html5" alt="HTML5" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="CSS3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="JavaScript">
-                    <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="React">
-                    <img src="https://cdn.simpleicons.org/react" alt="React" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="Vite">
-                    <img src="https://cdn.simpleicons.org/vite" alt="Vite" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="Tailwind CSS">
-                    <img src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="Bootstrap">
-                    <img src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="GitHub">
-                    <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="Draw.io">
-                    <img src="https://cdn.simpleicons.org/diagramsdotnet" alt="Draw.io" className="skill-icon-img" />
+                <div className="about-text">
+                  <p className="lead">I’m a Business Analyst with a background in Information Systems.</p>
+                  <p>I focus on translating business needs into clear, structured solutions.</p>
+                  <p>With hands-on frontend experience, I’m able to validate ideas quickly, communicate effectively with developers, and ensure solutions stay aligned with user and business goals.</p>
+
+                  <div className="about-actions mt-4">
+                    <a href="#works" className="btn btn-accent">SEE MY WORK</a>
+                    <a href="https://drive.google.com/file/d/1xRCIwlYaiQf54mUorn8-TAfmTBL_MXBq/view?usp=sharing" target="_blank" className="btn btn-glitch" data-text="CHECK MY CV">CHECK MY CV</a>
                   </div>
                 </div>
               </div>
-
-              {/* Business Analysis (Wide Card) */}
-              <div className="skill-card analysis fade-in stagger-2">
-                <div className="skill-header">
-                  <i className="fas fa-chart-line accent-icon"></i>
-                  <h3>Business & System Analysis</h3>
-                </div>
-                <div className="analysis-list">
-                  <div className="analysis-item">
-                    <i className="fas fa-search"></i>
-                    <span>System Requirements Analysis</span>
-                  </div>
-                  <div className="analysis-item">
-                    <i className="fas fa-share-alt"></i>
-                    <span>Flowchart & Process Design</span>
-                  </div>
-                  <div className="analysis-item">
-                    <i className="fas fa-database"></i>
-                    <span>ERD & Database Modeling</span>
-                  </div>
-                  <div className="analysis-item">
-                    <i className="fas fa-file-alt"></i>
-                    <span>Technical Documentation</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Multimedia (Medium Card) */}
-              <div className="skill-card multimedia fade-in stagger-3">
-                <div className="skill-header">
-                  <i className="fas fa-photo-video accent-icon"></i>
-                  <h3>Multimedia</h3>
-                </div>
-                <div className="skills-tiles-grid">
-                  <div className="skill-tile" title="OBS Studio">
-                    <img src="https://cdn.simpleicons.org/obsstudio/white" alt="OBS" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="CapCut">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Capcut-icon.svg" alt="CapCut" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="Canva">
-                    <img src="https://img.icons8.com/color/48/canva.png" alt="Canva" className="skill-icon-img" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Office (Medium Card) */}
-              <div className="skill-card office fade-in stagger-4">
-                <div className="skill-header">
-                  <i className="fas fa-briefcase accent-icon"></i>
-                  <h3>Office Tools</h3>
-                </div>
-                <div className="skills-tiles-grid">
-                  <div className="skill-tile" title="Microsoft Word">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Office_Word_%282019%E2%80%932025%29.svg" alt="Word" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="Microsoft Excel">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg" alt="Excel" className="skill-icon-img" />
-                  </div>
-                  <div className="skill-tile" title="Microsoft PowerPoint">
-                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg" alt="PPT" className="skill-icon-img" />
-                  </div>
-                </div>
+              <div className="about-image fade-in stagger-1">
+                <div className="image-overlay-gradient"></div>
+                {/* User's Stylish B&W Portrait */}
+                <img src={`${basePath}/images/about-me.png`} alt="WELLI - Business Analyst and Developer Portrait" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
+        {/* Skills Section */}
+        <section id="skills" className="section skills-section bg-light">
+          <div className="container">
+            <div className="section-header fade-in">
+              <h2>My Skills</h2>
+              <div className="skills-grid">
+                {/* Frontend Development (Large Card) */}
+                <div className="skill-card frontend fade-in stagger-1">
+                  <div className="skill-header">
+                    <i className="fas fa-code accent-icon"></i>
+                    <h3>Frontend Development</h3>
+                  </div>
+                  <div className="skills-tiles-grid">
+                    <div className="skill-tile" title="HTML5">
+                      <img src="https://cdn.simpleicons.org/html5" alt="HTML5" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="CSS3">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="JavaScript">
+                      <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="React">
+                      <img src="https://cdn.simpleicons.org/react" alt="React" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="Vite">
+                      <img src="https://cdn.simpleicons.org/vite" alt="Vite" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="Tailwind CSS">
+                      <img src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="Bootstrap">
+                      <img src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="GitHub">
+                      <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="Draw.io">
+                      <img src="https://cdn.simpleicons.org/diagramsdotnet" alt="Draw.io" className="skill-icon-img" />
+                    </div>
+                  </div>
+                </div>
 
-      {/* Services Section */}
-      <ServicesSection />
+                {/* Business Analysis (Wide Card) */}
+                <div className="skill-card analysis fade-in stagger-2">
+                  <div className="skill-header">
+                    <i className="fas fa-chart-line accent-icon"></i>
+                    <h3>Business & System Analysis</h3>
+                  </div>
+                  <div className="analysis-list">
+                    <div className="analysis-item">
+                      <i className="fas fa-search"></i>
+                      <span>System Requirements Analysis</span>
+                    </div>
+                    <div className="analysis-item">
+                      <i className="fas fa-share-alt"></i>
+                      <span>Flowchart & Process Design</span>
+                    </div>
+                    <div className="analysis-item">
+                      <i className="fas fa-database"></i>
+                      <span>ERD & Database Modeling</span>
+                    </div>
+                    <div className="analysis-item">
+                      <i className="fas fa-file-alt"></i>
+                      <span>Technical Documentation</span>
+                    </div>
+                  </div>
+                </div>
 
-      {/* Works / Portfolio Section */}
-      <section id="works" className="section works">
-        <div className="container">
-          <header className="section-header">
-            <h2 className="section-title">Project</h2>
-            <p className="section-subtitle">Portfolio</p>
-          </header>
+                {/* Multimedia (Medium Card) */}
+                <div className="skill-card multimedia fade-in stagger-3">
+                  <div className="skill-header">
+                    <i className="fas fa-photo-video accent-icon"></i>
+                    <h3>Multimedia</h3>
+                  </div>
+                  <div className="skills-tiles-grid">
+                    <div className="skill-tile" title="OBS Studio">
+                      <img src="https://cdn.simpleicons.org/obsstudio/white" alt="OBS" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="CapCut">
+                      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Capcut-icon.svg" alt="CapCut" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="Canva">
+                      <img src="https://img.icons8.com/color/48/canva.png" alt="Canva" className="skill-icon-img" />
+                    </div>
+                  </div>
+                </div>
 
-          <div className="portfolio-grid">
-            {/* Item New 1: IDX Trading Assistant */}
-            <a className="portfolio-item fade-in stagger-1" href="https://idx-trading-assistant.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: IDX Trading Assistant">
-              <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/IDX-Trading-Assistant.png')` } as any}>
-                <img src={`${basePath}/images/IDX-Trading-Assistant.png`} alt="IDX Trading Assistant — AI-Driven Financial Terminal" loading="lazy" decoding="async" />
-              </figure>
-              <div className="portfolio-overlay">
-                <h3>IDX Trading Assistant</h3>
-                <span className="category">AI Financial Terminal · Next.js</span>
-                <span className="view-work-btn" aria-hidden="true">View Work</span>
+                {/* Office (Medium Card) */}
+                <div className="skill-card office fade-in stagger-4">
+                  <div className="skill-header">
+                    <i className="fas fa-briefcase accent-icon"></i>
+                    <h3>Office Tools</h3>
+                  </div>
+                  <div className="skills-tiles-grid">
+                    <div className="skill-tile" title="Microsoft Word">
+                      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Office_Word_%282019%E2%80%932025%29.svg" alt="Word" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="Microsoft Excel">
+                      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg" alt="Excel" className="skill-icon-img" />
+                    </div>
+                    <div className="skill-tile" title="Microsoft PowerPoint">
+                      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg" alt="PPT" className="skill-icon-img" />
+                    </div>
+                  </div>
+                </div>
               </div>
-            </a>
-
-            {/* Item New 2: Luxury Villa Website */}
-            <a className="portfolio-item fade-in stagger-2" href="https://luxury-villa-website.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: Luxury Villa Website">
-              <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/luxury_villa_website.png')` } as any}>
-                <img src={`${basePath}/images/luxury_villa_website.png`} alt="Luxury Villa Website — High-Conversion Digital Storefront" loading="lazy" decoding="async" />
-              </figure>
-              <div className="portfolio-overlay">
-                <h3>Luxury Villa Website</h3>
-                <span className="category">Real Estate · High-End UI</span>
-                <span className="view-work-btn" aria-hidden="true">View Work</span>
-              </div>
-            </a>
-            {/* Item 1 */}
-            <a className="portfolio-item fade-in stagger-1" href="https://creastein.github.io/portofolio" target="_blank" rel="noopener noreferrer" aria-label="View project: Portfolio">
-              <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/portofolio.png')` } as any}>
-                <img src={`${basePath}/images/portofolio.png`} alt="Portfolio — Personal Portfolio Website" loading="lazy" decoding="async" />
-              </figure>
-              <div className="portfolio-overlay">
-                <h3>Portfolio</h3>
-                <span className="category">Web Portfolio · Frontend Development</span>
-                <span className="view-work-btn" aria-hidden="true">View Work</span>
-              </div>
-            </a>
-
-            {/* Item 2 */}
-            <a className="portfolio-item fade-in stagger-2" href="https://dancing-mountain-villa.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: Dancing Mountain Villa">
-              <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/dancingmountainvilla.png')` } as any}>
-                <img src={`${basePath}/images/dancingmountainvilla.png`} alt="Dancing Mountain Villa — Villa Rental Website" loading="lazy" decoding="async" />
-              </figure>
-              <div className="portfolio-overlay">
-                <h3>Dancing Mountain Villa</h3>
-                <span className="category">Web Design · React</span>
-                <span className="view-work-btn" aria-hidden="true">View Work</span>
-              </div>
-            </a>
-
-            {/* Item 3 */}
-            <a className="portfolio-item fade-in stagger-3" href="https://villa-utamaro-next.vercel.app/id" target="_blank" rel="noopener noreferrer" aria-label="View project: Villa Utamaro">
-              <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/VillaUtamaro.png')` } as any}>
-                <img src={`${basePath}/images/VillaUtamaro.png`} alt="Villa Utamaro — Luxury Villa Website" loading="lazy" decoding="async" />
-              </figure>
-              <div className="portfolio-overlay">
-                <h3>Villa Utamaro</h3>
-                <span className="category">Web Design · UI/UX</span>
-                <span className="view-work-btn" aria-hidden="true">View Work</span>
-              </div>
-            </a>
-
-            {/* Item 4 */}
-            <a className="portfolio-item fade-in stagger-4" href="#" target="_blank" rel="noopener noreferrer" aria-label="View project: Gereja JHB Salatiga">
-              <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/GerejaJHBSalatiga.png')` } as any}>
-                <img src={`${basePath}/images/GerejaJHBSalatiga.png`} alt="Gereja JHB Salatiga — Church Website" loading="lazy" decoding="async" />
-              </figure>
-              <div className="portfolio-overlay">
-                <h3>Gereja JHB Salatiga</h3>
-                <span className="category">Web Design · Community</span>
-                <span className="view-work-btn" aria-hidden="true">View Work</span>
-              </div>
-            </a>
-
-            {/* Item 5 */}
-            <a className="portfolio-item fade-in stagger-5" href="https://best1-trans.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: Best1Trans">
-              <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/best1trans.png')` } as any}>
-                <img src={`${basePath}/images/best1trans.png`} alt="Best1Trans — Car Rental Service" loading="lazy" decoding="async" />
-              </figure>
-              <div className="portfolio-overlay">
-                <h3>Best1Trans</h3>
-                <span className="category">Car Rental · Web Development</span>
-                <span className="view-work-btn" aria-hidden="true">View Work</span>
-              </div>
-            </a>
-
-            {/* Item 6 */}
-            <a className="portfolio-item fade-in stagger-6" href="#" target="_blank" rel="noopener noreferrer" aria-label="View project: E-commerce Landing Page">
-              <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/E-commerceSaaSLandingPage.png')` } as any}>
-                <img src={`${basePath}/images/E-commerceSaaSLandingPage.png`} alt="E-commerce Landing Page — SaaS Website" loading="lazy" decoding="async" />
-              </figure>
-              <div className="portfolio-overlay">
-                <h3>E-commerce / SaaS</h3>
-                <span className="category">Landing Page · Marketing</span>
-                <span className="view-work-btn" aria-hidden="true">View Work</span>
-              </div>
-            </a>
+            </div>
           </div>
+        </section>
 
-          <div className="works-cta">
-            <a href="https://creastein.github.io/" className="btn btn-outline" aria-label="View all works">View All Works</a>
+
+        {/* Services Section */}
+        <ServicesSection />
+
+        {/* Works / Portfolio Section */}
+        <section id="works" className="section works">
+          <div className="container">
+            <header className="section-header">
+              <h2 className="section-title">Project</h2>
+              <p className="section-subtitle">Portfolio</p>
+            </header>
+
+            <div className="portfolio-grid">
+              {/* Item New 1: IDX Trading Assistant */}
+              <a className="portfolio-item fade-in stagger-1" href="https://idx-trading-assistant.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: IDX Trading Assistant">
+                <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/IDX-Trading-Assistant.png')` } as any}>
+                  <img src={`${basePath}/images/IDX-Trading-Assistant.png`} alt="IDX Trading Assistant — AI-Driven Financial Terminal" loading="lazy" decoding="async" />
+                </figure>
+                <div className="portfolio-overlay">
+                  <h3>IDX Trading Assistant</h3>
+                  <span className="category">AI Financial Terminal · Next.js</span>
+                  <span className="view-work-btn" aria-hidden="true">View Work</span>
+                </div>
+              </a>
+
+              {/* Item New 2: Luxury Villa Website */}
+              <a className="portfolio-item fade-in stagger-2" href="https://luxury-villa-website.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: Luxury Villa Website">
+                <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/luxury_villa_website.png')` } as any}>
+                  <img src={`${basePath}/images/luxury_villa_website.png`} alt="Luxury Villa Website — High-Conversion Digital Storefront" loading="lazy" decoding="async" />
+                </figure>
+                <div className="portfolio-overlay">
+                  <h3>Luxury Villa Website</h3>
+                  <span className="category">Real Estate · High-End UI</span>
+                  <span className="view-work-btn" aria-hidden="true">View Work</span>
+                </div>
+              </a>
+              {/* Item 1 */}
+              <a className="portfolio-item fade-in stagger-1" href="https://creastein.github.io/portofolio" target="_blank" rel="noopener noreferrer" aria-label="View project: Portfolio">
+                <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/portofolio.png')` } as any}>
+                  <img src={`${basePath}/images/portofolio.png`} alt="Portfolio — Personal Portfolio Website" loading="lazy" decoding="async" />
+                </figure>
+                <div className="portfolio-overlay">
+                  <h3>Portfolio</h3>
+                  <span className="category">Web Portfolio · Frontend Development</span>
+                  <span className="view-work-btn" aria-hidden="true">View Work</span>
+                </div>
+              </a>
+
+              {/* Item 2 */}
+              <a className="portfolio-item fade-in stagger-2" href="https://dancing-mountain-villa.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: Dancing Mountain Villa">
+                <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/dancingmountainvilla.png')` } as any}>
+                  <img src={`${basePath}/images/dancingmountainvilla.png`} alt="Dancing Mountain Villa — Villa Rental Website" loading="lazy" decoding="async" />
+                </figure>
+                <div className="portfolio-overlay">
+                  <h3>Dancing Mountain Villa</h3>
+                  <span className="category">Web Design · React</span>
+                  <span className="view-work-btn" aria-hidden="true">View Work</span>
+                </div>
+              </a>
+
+              {/* Item 3 */}
+              <a className="portfolio-item fade-in stagger-3" href="https://villa-utamaro-next.vercel.app/id" target="_blank" rel="noopener noreferrer" aria-label="View project: Villa Utamaro">
+                <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/VillaUtamaro.png')` } as any}>
+                  <img src={`${basePath}/images/VillaUtamaro.png`} alt="Villa Utamaro — Luxury Villa Website" loading="lazy" decoding="async" />
+                </figure>
+                <div className="portfolio-overlay">
+                  <h3>Villa Utamaro</h3>
+                  <span className="category">Web Design · UI/UX</span>
+                  <span className="view-work-btn" aria-hidden="true">View Work</span>
+                </div>
+              </a>
+
+              {/* Item 4 */}
+              <a className="portfolio-item fade-in stagger-4" href="#" target="_blank" rel="noopener noreferrer" aria-label="View project: Gereja JHB Salatiga">
+                <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/GerejaJHBSalatiga.png')` } as any}>
+                  <img src={`${basePath}/images/GerejaJHBSalatiga.png`} alt="Gereja JHB Salatiga — Church Website" loading="lazy" decoding="async" />
+                </figure>
+                <div className="portfolio-overlay">
+                  <h3>Gereja JHB Salatiga</h3>
+                  <span className="category">Web Design · Community</span>
+                  <span className="view-work-btn" aria-hidden="true">View Work</span>
+                </div>
+              </a>
+
+              {/* Item 5 */}
+              <a className="portfolio-item fade-in stagger-5" href="https://best1-trans.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View project: Best1Trans">
+                <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/best1trans.png')` } as any}>
+                  <img src={`${basePath}/images/best1trans.png`} alt="Best1Trans — Car Rental Service" loading="lazy" decoding="async" />
+                </figure>
+                <div className="portfolio-overlay">
+                  <h3>Best1Trans</h3>
+                  <span className="category">Car Rental · Web Development</span>
+                  <span className="view-work-btn" aria-hidden="true">View Work</span>
+                </div>
+              </a>
+
+              {/* Item 6 */}
+              <a className="portfolio-item fade-in stagger-6" href="#" target="_blank" rel="noopener noreferrer" aria-label="View project: E-commerce Landing Page">
+                <figure className="portfolio-image" style={{ '--bg': `url('${basePath}/images/E-commerceSaaSLandingPage.png')` } as any}>
+                  <img src={`${basePath}/images/E-commerceSaaSLandingPage.png`} alt="E-commerce Landing Page — SaaS Website" loading="lazy" decoding="async" />
+                </figure>
+                <div className="portfolio-overlay">
+                  <h3>E-commerce / SaaS</h3>
+                  <span className="category">Landing Page · Marketing</span>
+                  <span className="view-work-btn" aria-hidden="true">View Work</span>
+                </div>
+              </a>
+            </div>
+
+            <div className="works-cta">
+              <a href="https://creastein.github.io/" className="btn btn-outline" aria-label="View all works">View All Works</a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Call to Action */}
-      <section className="section cta-section">
-        <div className="container">
-          <h2>A Creative studio passionate about<br />design, art and creativity.</h2>
-          <a href="#contact" className="btn btn-white">Contact Me</a>
-        </div>
-      </section>
+        {/* Call to Action */}
+        <section className="section cta-section">
+          <div className="container">
+            <h2>A Creative studio passionate about<br />design, art and creativity.</h2>
+            <a href="#contact" className="btn btn-white">Contact Me</a>
+          </div>
+        </section>
+      </main>
 
       {/* Contact & Footer */}
       <footer id="contact" className="footer">
