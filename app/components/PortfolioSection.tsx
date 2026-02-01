@@ -1,0 +1,42 @@
+"use client";
+
+import { portfolioItems } from '../data/portfolioItems';
+
+export default function PortfolioSection() {
+    return (
+        <section id="works" className="section works">
+            <div className="container">
+                <header className="section-header">
+                    <h2 className="section-title">Project</h2>
+                    <p className="section-subtitle">Portfolio</p>
+                </header>
+
+                <div className="portfolio-grid">
+                    {portfolioItems.map((item, index) => (
+                        <a
+                            key={index}
+                            className={`portfolio-item fade-in stagger-${(index % 6) + 1}`}
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`View project: ${item.title}`}
+                        >
+                            <figure className="portfolio-image" style={{ '--bg': `url('${item.image}')` } as any}>
+                                <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
+                            </figure>
+                            <div className="portfolio-overlay">
+                                <h3>{item.title}</h3>
+                                <span className="category">{item.category}</span>
+                                <span className="view-work-btn" aria-hidden="true">View Work</span>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+
+                <div className="works-cta">
+                    <a href="https://creastein.github.io/" className="btn btn-outline" aria-label="View all works">View All Works</a>
+                </div>
+            </div>
+        </section>
+    );
+}
