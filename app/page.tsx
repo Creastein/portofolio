@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { useScrollSpy } from './hooks/useScrollSpy';
 
 import LoadingScreen from './components/LoadingScreen';
@@ -8,11 +9,13 @@ import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
-import SkillsSection from './components/SkillsSection';
-import ServicesSection from './components/ServicesSection';
-import PortfolioSection from './components/PortfolioSection';
-import CTASection from './components/CTASection';
-import ContactFooter from './components/ContactFooter';
+
+// Lazy load below-the-fold sections
+const SkillsSection = dynamic(() => import('./components/SkillsSection'), { ssr: true });
+const ServicesSection = dynamic(() => import('./components/ServicesSection'), { ssr: true });
+const PortfolioSection = dynamic(() => import('./components/PortfolioSection'), { ssr: true });
+const CTASection = dynamic(() => import('./components/CTASection'), { ssr: true });
+const ContactFooter = dynamic(() => import('./components/ContactFooter'), { ssr: true });
 
 export default function Home() {
   const [loading, setLoading] = useState(true);

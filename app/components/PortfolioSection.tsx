@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { portfolioItems } from '../data/portfolioItems';
 
 export default function PortfolioSection() {
@@ -22,7 +23,13 @@ export default function PortfolioSection() {
                             aria-label={`View project: ${item.title}`}
                         >
                             <figure className="portfolio-image" style={{ '--bg': `url('${item.image}')` } as any}>
-                                <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
+                                <Image
+                                    src={item.image}
+                                    alt={item.alt}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    style={{ objectFit: 'cover' }}
+                                />
                             </figure>
                             <div className="portfolio-overlay">
                                 <h3>{item.title}</h3>

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from 'next/image';
+
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function AboutSection() {
@@ -24,7 +26,16 @@ export default function AboutSection() {
                     </div>
                     <div className="about-image fade-in stagger-1">
                         <div className="image-overlay-gradient"></div>
-                        <img src={`${basePath}/images/about-me.png`} alt="WELLI - Business Analyst and Developer Portrait" loading="lazy" decoding="async" />
+                        <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '400px' }}>
+                            <Image
+                                src={`${basePath}/images/about-me.png`}
+                                alt="WELLI - Business Analyst and Developer Portrait"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className="about-img"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

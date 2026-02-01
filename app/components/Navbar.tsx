@@ -2,6 +2,8 @@
 
 import { useEffect } from 'react';
 
+import Image from 'next/image';
+
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Navbar() {
@@ -40,7 +42,14 @@ export default function Navbar() {
         <nav className="navbar">
             <div className="container nav-container">
                 <a href="#home" className="logo">
-                    <img src={`${basePath}/images/logo.png`} alt="WELLI Logo" width="120" height="auto" />
+                    <Image
+                        src={`${basePath}/images/logo.png`}
+                        alt="WELLI Logo"
+                        width={120}
+                        height={52}
+                        className="w-auto h-[52px]"
+                        priority
+                    />
                 </a>
                 <button className="mobile-toggle" aria-label="Toggle navigation">
                     <span></span>
