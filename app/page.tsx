@@ -6,6 +6,7 @@ import { useScrollSpy } from './hooks/useScrollSpy';
 
 import LoadingScreen from './components/LoadingScreen';
 import CustomCursor from './components/CustomCursor';
+import SkipLink from './components/SkipLink';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -108,26 +109,30 @@ export default function Home() {
       {/* Custom Cursor */}
       <CustomCursor />
 
+      <SkipLink />
+
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section */}
-      <HeroSection />
+      <main id="main-content">
+        {/* Hero Section */}
+        <HeroSection />
 
-      {/* About Section */}
-      <AboutSection />
+        {/* About Section */}
+        <AboutSection />
 
-      {/* Skills Section */}
-      <SkillsSection />
+        {/* Skills Section */}
+        <SkillsSection />
 
-      {/* Services Section */}
-      <ServicesSection />
+        {/* Services Section */}
+        <ServicesSection />
 
-      {/* Works / Portfolio Section */}
-      <PortfolioSection />
+        {/* Works / Portfolio Section */}
+        <PortfolioSection />
 
-      {/* Call to Action */}
-      <CTASection />
+        {/* Call to Action */}
+        <CTASection />
+      </main>
 
       {/* Contact & Footer */}
       <ContactFooter />
