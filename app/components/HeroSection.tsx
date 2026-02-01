@@ -41,7 +41,14 @@ export default function HeroSection() {
                 const htmlEl = el as HTMLElement;
                 const speed = parseFloat(htmlEl.dataset.parallax || '0.5');
                 const yPos = -(scrollY * speed);
-                htmlEl.style.backgroundPositionY = `calc(center + ${yPos}px)`;
+
+                // If it's the background section
+                if (htmlEl.classList.contains('hero-section')) {
+                    htmlEl.style.backgroundPositionY = `calc(center + ${yPos}px)`;
+                } else {
+                    // For text elements
+                    htmlEl.style.transform = `translateY(${yPos}px)`;
+                }
             });
         };
 
@@ -101,13 +108,13 @@ export default function HeroSection() {
                 <div id="particles-js"></div>
                 <div className="hero-overlay"></div>
                 <div className="container hero-content">
-                    <span className="subtitle hero-item stagger-1">BUSINESS ANALYST & DEVELOPER</span>
-                    <h1 className="hero-item stagger-2">
+                    <span className="subtitle hero-item stagger-1" data-parallax="0.2">BUSINESS ANALYST & DEVELOPER</span>
+                    <h1 className="hero-item stagger-2" data-parallax="0.1">
                         <span className="typewriter-text" data-text='["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"]'></span><span className="cursor">|</span>
                     </h1>
-                    <p className="hero-item stagger-3">I help turn business ideas into simple<br />and useful web experiences.</p>
+                    <p className="hero-item stagger-3" data-parallax="0.15">I help turn business ideas into simple<br />and useful web experiences.</p>
 
-                    <div className="social-icons hero-item stagger-4">
+                    <div className="social-icons hero-item stagger-4" data-parallax="0.05">
                         <a href="https://github.com/Creastein" className="magnetic-btn" target="_blank" aria-label="GitHub"><i className="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/welli-" className="magnetic-btn" target="_blank" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
                         <a href="https://www.instagram.com/_well07/" className="magnetic-btn" target="_blank" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
