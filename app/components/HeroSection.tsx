@@ -3,13 +3,11 @@
 import { useEffect } from 'react';
 import Script from 'next/script';
 import { useTypewriter } from '../hooks/useTypewriter';
-import { useLanguage } from '../context/LanguageContext';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function HeroSection() {
-    const { t } = useLanguage();
-    const { text } = useTypewriter(t.hero.roles, 100, 50, 2000);
+    useTypewriter('.typewriter-text', 200);
 
     useEffect(() => {
         // Magnetic button effect
@@ -49,23 +47,26 @@ export default function HeroSection() {
 
         window.addEventListener('scroll', handleParallax, { passive: true });
 
+        // Spotlight effect
+        const heroSection = document.getElementById('home');
+        const handleSpotlight = (e: MouseEvent) => {
+            if (!heroSection) return;
+            const rect = heroSection.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            heroSection.style.setProperty('--mouse-x', `${x}%`);
+            heroSection.style.setProperty('--mouse-y', `${y}%`);
+        };
+
+        if (heroSection) {
+            heroSection.addEventListener('mousemove', handleSpotlight);
+        }
+
         return () => {
             window.removeEventListener('scroll', handleParallax);
-            // Cleanup for magnetic buttons
-            magneticBtns.forEach(btn => {
-                const htmlBtn = btn as HTMLElement;
-                const handleMouseMove = (e: MouseEvent) => {
-                    const rect = htmlBtn.getBoundingClientRect();
-                    const x = e.clientX - rect.left - rect.width / 2;
-                    const y = e.clientY - rect.top - rect.height / 2;
-                    htmlBtn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-                };
-                const handleMouseLeave = () => {
-                    htmlBtn.style.transform = 'translate(0, 0)';
-                };
-                btn.removeEventListener('mousemove', handleMouseMove as EventListener);
-                btn.removeEventListener('mouseleave', handleMouseLeave);
-            });
+            if (heroSection) {
+                heroSection.removeEventListener('mousemove', handleSpotlight);
+            }
         };
     }, []);
 
@@ -96,47 +97,27 @@ export default function HeroSection() {
                 }}
             />
 
-            <section id="home" className="hero-section">
-                {/* ... particles ... */}
-                <div id="particles-js" className="particles-container"></div>
+            <section id="home" className="hero-section" data-parallax="0.5" style={{ backgroundImage: `url('${basePath}/images/hero-bg.png')` }}>
+                <div id="particles-js"></div>
+                <div className="hero-overlay"></div>
+                <div className="container hero-content">
+                    <span className="subtitle hero-item stagger-1">BUSINESS ANALYST & DEVELOPER</span>
+                    <h1 className="hero-item stagger-2">
+                        <span className="typewriter-text" data-text='["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"]'></span><span className="cursor">|</span>
+                    </h1>
+                    <p className="hero-item stagger-3">I help turn business ideas into simple<br />and useful web experiences.</p>
 
-                <div className="container hero-container">
-                    <div className="hero-content">
-                        <p className="hero-subtitle fade-in">{t.hero.subtitle}</p>
-                        <h1 className="hero-title fade-in stagger-1">
-                            I am a <span className="highlight-text type-writer">{text}</span>
-                            <span className="cursor">|</span>
-                        </h1>
-                        <p className="hero-description fade-in stagger-2">
-                            {t.hero.description}
-                        </p>
-
-                        <div className="hero-actions fade-in stagger-3">
-                            <div className="social-icons">
-                                {/* ... icons ... */}
-                                {/* keep existing icons */}
-                                <a href="https://github.com/Creastein" target="_blank" className="social-icon" aria-label="GitHub"><i className="fab fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/welli-" target="_blank" className="social-icon" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/_well07/" target="_blank" className="social-icon" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-                                <a href="https://wa.me/085161507114" target="_blank" className="social-icon" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
-                            </div>
-                        </div>
+                    <div className="social-icons hero-item stagger-4">
+                        <a href="https://github.com/Creastein" className="magnetic-btn" target="_blank" aria-label="GitHub"><i className="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/welli-" className="magnetic-btn" target="_blank" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/_well07/" className="magnetic-btn" target="_blank" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/085161507114" className="magnetic-btn" target="_blank" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
                     </div>
 
-                    <div className="scroll-indicator fade-in stagger-4">
-                        <div className="mouse">
-                            <div className="wheel"></div>
-                        </div>
-                        <div className="arrow-scroll">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p>{t.hero.scrollDown}</p>
+                    <div className="scroll-down hero-item stagger-5">
+                        <a href="#about">SCROLL DOWN <span></span></a>
                     </div>
                 </div>
-
-                <div className="hero-overlay"></div>
             </section>
         </>
     );

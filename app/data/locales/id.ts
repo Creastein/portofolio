@@ -10,7 +10,8 @@ export const id = {
     hero: {
         subtitle: "BUSINESS ANALYST & DEVELOPER",
         roles: ["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"],
-        description: "Saya membantu mengubah ide bisnis menjadi\npengalaman web yang sederhana dan berguna.",
+        description: "Saya membantu mengubah ide bisnis menjadi pengalaman web yang sederhana dan berguna.",
+        descriptionHighlight: ["sederhana dan berguna"],
         scrollDown: "GULIR KE BAWAH"
     },
     about: {
@@ -19,7 +20,22 @@ export const id = {
         p1: "Saya fokus menerjemahkan kebutuhan bisnis menjadi solusi yang jelas dan terstruktur.",
         p2: "Dengan pengalaman frontend, saya dapat memvalidasi ide dengan cepat, berkomunikasi efektif dengan developer, dan memastikan solusi selaras dengan tujuan pengguna dan bisnis.",
         btnWork: "LIHAT KARYA SAYA",
-        btnCv: "LIHAT CV SAYA"
+        btnCv: "LIHAT CV SAYA",
+        stats: {
+            projects: "Proyek",
+            years: "Tahun Pengalaman",
+            satisfaction: "Kepuasan Klien"
+        },
+        timeline: {
+            step1: "Memulai Perjalanan",
+            step1Desc: "Mulai belajar pengembangan web dan analisis bisnis",
+            step2: "Pekerjaan Profesional",
+            step2Desc: "Proyek profesional pertama sebagai BA dan developer",
+            step3: "Spesialisasi",
+            step3Desc: "Fokus pada framework modern dan desain sistem",
+            step4: "Saat Ini",
+            step4Desc: "Ahli pengembangan full-stack & analisis bisnis"
+        }
     },
     skills: {
         title: "Keahlian Saya",

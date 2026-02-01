@@ -1,39 +1,62 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
-export function useTypewriter(words: string[], typeSpeed = 150, deleteSpeed = 100, waitTime = 2000) {
-    const [text, setText] = useState('');
-    const [wordIndex, setWordIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-
+export function useTypewriter(selector: string, typingSpeed: number = 100) {
     useEffect(() => {
-        const currentWord = words[wordIndex % words.length];
+        const elements = document.querySelectorAll(selector);
 
-        if (!isDeleting && text === currentWord) {
-            // Finished typing word, wait before deleting
-            const timer = setTimeout(() => {
-                setIsDeleting(true);
-            }, waitTime);
-            return () => clearTimeout(timer);
-        } else if (isDeleting && text === '') {
-            // Finished deleting, move to next word
-            setIsDeleting(false);
-            setWordIndex((prev) => prev + 1);
-            return;
-        }
+        elements.forEach(element => {
+            const htmlElement = element as HTMLElement;
+            const dataText = htmlElement.getAttribute('data-text');
 
-        const timer = setTimeout(() => {
-            setText((prev) => {
+            if (!dataText) return;
+
+            let words: string[];
+            try {
+                words = JSON.parse(dataText);
+            } catch {
+                words = [dataText];
+            }
+
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let currentText = '';
+
+            const type = () => {
+                const currentWord = words[wordIndex % words.length];
+
                 if (isDeleting) {
-                    return prev.slice(0, -1);
+                    currentText = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
                 } else {
-                    return currentWord.slice(0, prev.length + 1);
+                    currentText = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
                 }
-            });
-        }, isDeleting ? deleteSpeed : typeSpeed);
 
-        return () => clearTimeout(timer);
-    }, [text, isDeleting, wordIndex, words, typeSpeed, deleteSpeed, waitTime]);
+                htmlElement.textContent = currentText;
 
-    return { text };
+                let typeSpeed = typingSpeed;
+
+                if (isDeleting) {
+                    typeSpeed /= 2;
+                }
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    // Pause at end of word
+                    typeSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex++;
+                    typeSpeed = 500;
+                }
+
+                setTimeout(type, typeSpeed);
+            };
+
+            // Start typing after a short delay
+            setTimeout(type, 1000);
+        });
+    }, [selector, typingSpeed]);
 }

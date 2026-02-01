@@ -10,7 +10,8 @@ export const en = {
     hero: {
         subtitle: "BUSINESS ANALYST & DEVELOPER",
         roles: ["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"],
-        description: "I help turn business ideas into simple\nand useful web experiences.",
+        description: "I help turn business ideas into simple and useful web experiences.",
+        descriptionHighlight: ["simple and useful"],
         scrollDown: "SCROLL DOWN"
     },
     about: {
@@ -19,7 +20,22 @@ export const en = {
         p1: "I focus on translating business needs into clear, structured solutions.",
         p2: "With hands-on frontend experience, I’m able to validate ideas quickly, communicate effectively with developers, and ensure solutions stay aligned with user and business goals.",
         btnWork: "SEE MY WORK",
-        btnCv: "CHECK MY CV"
+        btnCv: "CHECK MY CV",
+        stats: {
+            projects: "Projects",
+            years: "Years Exp",
+            satisfaction: "Client Satisfaction"
+        },
+        timeline: {
+            step1: "Started Journey",
+            step1Desc: "Began learning web development and business analysis",
+            step2: "Professional Work",
+            step2Desc: "First professional projects as BA and developer",
+            step3: "Specialization",
+            step3Desc: "Focused on modern frameworks and system design",
+            step4: "Current",
+            step4Desc: "Full-stack development & business analysis expert"
+        }
     },
     skills: {
         title: "My Skills",

@@ -109,29 +109,31 @@ export default function Home() {
       {/* Custom Cursor */}
       <CustomCursor />
 
-      {/* Navigation */}
-      <Navbar />
+      <main className="relative min-h-screen bg-slate-900 text-slate-200 overflow-x-hidden">
+        {/* Navigation */}
+        <Navbar />
 
-      {/* Hero Section */}
-      <HeroSection />
+        {/* Hero Section */}
+        <HeroSection />
 
-      {/* About Section */}
-      <AboutSection />
+        {/* About Section */}
+        <AboutSection />
 
-      {/* Skills Section */}
-      <SkillsSection />
+        {/* Skills Section */}
+        <SkillsSection />
 
-      {/* Services Section */}
-      <ServicesSection />
+        {/* Services Section */}
+        <ServicesSection />
 
-      {/* Works / Portfolio Section */}
-      <PortfolioSection />
+        {/* Works / Portfolio Section */}
+        <PortfolioSection />
 
-      {/* Call to Action */}
-      <CTASection />
+        {/* Call to Action */}
+        <CTASection />
 
-      {/* Contact & Footer */}
-      <ContactFooter />
+        {/* Contact & Footer */}
+        <ContactFooter />
+      </main>
     </LanguageProvider>
   );
 }
