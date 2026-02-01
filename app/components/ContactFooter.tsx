@@ -1,21 +1,24 @@
 "use client";
 
+import { useLanguage } from '../context/LanguageContext';
+
 export default function ContactFooter() {
+    const { t } = useLanguage();
+
     return (
-        <footer id="contact" className="footer">
+        <footer id="contact" className="contact-footer">
             <div className="container">
-                <div className="contact-content">
-                    <h2>Let's work together on your next project</h2>
-                    <a href="mailto:well0711200@gmail.com" className="email-link">well0711200@gmail.com</a>
-                </div>
-                <div className="footer-social">
-                    <a href="https://wa.me/085161507114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i className="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/welli-" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/_well07/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-                    <a href="https://github.com/Creastein" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i className="fab fa-github"></i></a>
-                </div>
-                <div className="copyright">
-                    <p>&copy; 2025 WELLI. All rights reserved. | Powered by Creativity.</p>
+                <div className="footer-content text-center">
+                    <h2 className="section-title fade-in">{t.footer.title}</h2>
+                    <div className="social-links fade-in stagger-1">
+                        <a href="https://github.com/creastein" target="_blank" aria-label="GitHub"><i className="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/welli-welli-098553229/" target="_blank" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/welli_freelancer/" target="_blank" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+                        <a href="mailto:welli@example.com" aria-label="Email"><i className="fas fa-envelope"></i></a>
+                    </div>
+                    <p className="copyright fade-in stagger-2">
+                        {t.footer.copyright}
+                    </p>
                 </div>
             </div>
         </footer>

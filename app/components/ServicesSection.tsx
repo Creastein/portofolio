@@ -3,6 +3,7 @@
 import { useRef, useState, MouseEvent } from 'react';
 import './ServicesSection.css';
 import { servicesData } from '../data/servicesData';
+import { useLanguage } from '../context/LanguageContext';
 
 interface ServiceCardProps {
     title: string;
@@ -71,21 +72,23 @@ const ServiceCard = ({ title, description, icon, index }: ServiceCardProps) => {
 };
 
 export default function ServicesSection() {
+    const { t } = useLanguage();
+
     return (
         <section id="services" className="premium-services-section">
             <div className="premium-services-container">
                 <div className="premium-services-header">
-                    <h2>Services</h2>
-                    <p>Comprehensive solutions to bring your digital vision to life with creativity and precision.</p>
+                    <h2>{t.services.title}</h2>
+                    <p>{t.services.subtitle}</p>
                 </div>
 
                 <div className="premium-services-grid">
-                    {servicesData.map((service, index) => (
+                    {t.services.items.map((service, index) => (
                         <ServiceCard
                             key={index}
                             title={service.title}
                             description={service.description}
-                            icon={service.icon}
+                            icon={servicesData[index]?.icon || 'fa-code'} // Fallback or strict index match
                             index={index}
                         />
                     ))}

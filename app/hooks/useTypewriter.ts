@@ -1,62 +1,39 @@
 "use client";
+import { useState, useEffect } from 'react';
 
-import { useEffect, useRef } from 'react';
-
-export function useTypewriter(selector: string, delay: number = 500) {
-    const isInitialized = useRef(false);
+export function useTypewriter(words: string[], typeSpeed = 150, deleteSpeed = 100, waitTime = 2000) {
+    const [text, setText] = useState('');
+    const [wordIndex, setWordIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
-        if (isInitialized.current) return;
+        const currentWord = words[wordIndex % words.length];
 
-        const initTypewriter = () => {
-            const textElement = document.querySelector(selector);
-            if (!textElement) return;
+        if (!isDeleting && text === currentWord) {
+            // Finished typing word, wait before deleting
+            const timer = setTimeout(() => {
+                setIsDeleting(true);
+            }, waitTime);
+            return () => clearTimeout(timer);
+        } else if (isDeleting && text === '') {
+            // Finished deleting, move to next word
+            setIsDeleting(false);
+            setWordIndex((prev) => prev + 1);
+            return;
+        }
 
-            isInitialized.current = true;
-
-            const textArray = JSON.parse(textElement.getAttribute('data-text') || '[]');
-            const typeSpeed = 100;
-            const deleteSpeed = 50;
-            const waitTime = 2000;
-
-            let textIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-
-            const type = () => {
-                const current = textIndex % textArray.length;
-                const fullTxt = textArray[current];
-
+        const timer = setTimeout(() => {
+            setText((prev) => {
                 if (isDeleting) {
-                    textElement.textContent = fullTxt.substring(0, charIndex - 1);
-                    charIndex--;
+                    return prev.slice(0, -1);
                 } else {
-                    textElement.textContent = fullTxt.substring(0, charIndex + 1);
-                    charIndex++;
+                    return currentWord.slice(0, prev.length + 1);
                 }
+            });
+        }, isDeleting ? deleteSpeed : typeSpeed);
 
-                let typeSpeedReal = typeSpeed;
-
-                if (isDeleting) {
-                    typeSpeedReal = deleteSpeed;
-                }
-
-                if (!isDeleting && charIndex === fullTxt.length) {
-                    typeSpeedReal = waitTime;
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    textIndex++;
-                    typeSpeedReal = 500;
-                }
-
-                setTimeout(type, typeSpeedReal);
-            };
-
-            type();
-        };
-
-        const timer = setTimeout(initTypewriter, delay);
         return () => clearTimeout(timer);
-    }, [selector, delay]);
+    }, [text, isDeleting, wordIndex, words, typeSpeed, deleteSpeed, waitTime]);
+
+    return { text };
 }

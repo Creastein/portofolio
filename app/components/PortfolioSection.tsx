@@ -2,14 +2,17 @@
 
 import Image from 'next/image';
 import { portfolioItems } from '../data/portfolioItems';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function PortfolioSection() {
+    const { t } = useLanguage();
+
     return (
         <section id="works" className="section works">
             <div className="container">
                 <header className="section-header">
-                    <h2 className="section-title">Project</h2>
-                    <p className="section-subtitle">Portfolio</p>
+                    <h2 className="section-title">{t.portfolio.title}</h2>
+                    <p className="section-subtitle">{t.portfolio.subtitle}</p>
                 </header>
 
                 <div className="portfolio-grid">
@@ -34,14 +37,14 @@ export default function PortfolioSection() {
                             <div className="portfolio-overlay">
                                 <h3>{item.title}</h3>
                                 <span className="category">{item.category}</span>
-                                <span className="view-work-btn" aria-hidden="true">View Work</span>
+                                <span className="view-work-btn" aria-hidden="true">{t.portfolio.viewBtn}</span>
                             </div>
                         </a>
                     ))}
                 </div>
 
                 <div className="works-cta">
-                    <a href="https://creastein.github.io/" className="btn btn-outline" aria-label="View all works">View All Works</a>
+                    <a href="https://creastein.github.io/" className="btn btn-outline" aria-label="View all works">{t.portfolio.viewAll}</a>
                 </div>
             </div>
         </section>

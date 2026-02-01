@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect } from 'react';
-
 import Image from 'next/image';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useLanguage } from '../context/LanguageContext';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Navbar() {
+    const { t } = useLanguage();
+
     useEffect(() => {
         const mobileToggle = document.querySelector('.mobile-toggle');
         const navLinks = document.querySelector('.nav-links');
@@ -57,12 +60,13 @@ export default function Navbar() {
                     <span></span>
                 </button>
                 <ul className="nav-links">
-                    <li><a href="#home" className="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" className="active">{t.navbar.home}</a></li>
+                    <li><a href="#about">{t.navbar.about}</a></li>
+                    <li><a href="#skills">{t.navbar.skills}</a></li>
+                    <li><a href="#services">{t.navbar.services}</a></li>
+                    <li><a href="#works">{t.navbar.works}</a></li>
+                    <li><a href="#contact">{t.navbar.contact}</a></li>
+                    <li><LanguageSwitcher /></li>
                 </ul>
             </div>
         </nav>

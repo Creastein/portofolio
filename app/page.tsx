@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useScrollSpy } from './hooks/useScrollSpy';
+import { LanguageProvider } from './context/LanguageContext';
 
 import LoadingScreen from './components/LoadingScreen';
 import CustomCursor from './components/CustomCursor';
@@ -101,7 +102,7 @@ export default function Home() {
   }, [loading]);
 
   return (
-    <>
+    <LanguageProvider>
       {/* Loading Screen */}
       <LoadingScreen isLoading={loading} onLoadingComplete={handleLoadingComplete} />
 
@@ -131,6 +132,6 @@ export default function Home() {
 
       {/* Contact & Footer */}
       <ContactFooter />
-    </>
+    </LanguageProvider>
   );
 }
