@@ -1,4 +1,7 @@
 export const id = {
+    common: {
+        skipToContent: "Lanjut ke konten"
+    },
     navbar: {
         home: "Beranda",
         about: "Tentang",

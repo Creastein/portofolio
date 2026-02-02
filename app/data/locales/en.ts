@@ -1,4 +1,7 @@
 export const en = {
+    common: {
+        skipToContent: "Skip to content"
+    },
     navbar: {
         home: "Home",
         about: "About",
