@@ -7,6 +7,7 @@ import { LanguageProvider } from './context/LanguageContext';
 
 import LoadingScreen from './components/LoadingScreen';
 import CustomCursor from './components/CustomCursor';
+import SkipLink from './components/SkipLink';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -110,6 +111,7 @@ export default function Home() {
       <CustomCursor />
 
       <main className="relative min-h-screen bg-slate-900 text-slate-200 overflow-x-hidden">
+        <SkipLink />
         {/* Navigation */}
         <Navbar />
 
