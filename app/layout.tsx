@@ -3,6 +3,7 @@ import { Poppins, Playfair_Display, Oswald } from "next/font/google";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import SkipLink from "./components/SkipLink";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -78,6 +79,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
       <body className="antialiased font-sans">
+        <SkipLink />
         <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
         {children}
       </body>
