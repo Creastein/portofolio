@@ -104,7 +104,13 @@ export default function HeroSection() {
                 }}
             />
 
-            <section id="home" className="hero-section" data-parallax="0.5" style={{ backgroundImage: `url('${basePath}/images/hero-bg.png')` }}>
+            <section
+                id="home"
+                className="hero-section focus:outline-none"
+                data-parallax="0.5"
+                style={{ backgroundImage: `url('${basePath}/images/hero-bg.png')` }}
+                tabIndex={-1}
+            >
                 <div id="particles-js"></div>
                 <div className="hero-overlay"></div>
                 <div className="container hero-content">

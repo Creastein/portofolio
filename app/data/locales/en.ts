@@ -89,5 +89,8 @@ export const en = {
     footer: {
         title: "Let's work together on your next project",
         copyright: "© 2025 WELLI. All rights reserved. | Powered by Creativity."
+    },
+    a11y: {
+        skipToContent: "Skip to main content"
     }
 };

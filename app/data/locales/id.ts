@@ -89,5 +89,8 @@ export const id = {
     footer: {
         title: "Mari bekerja sama di proyek Anda berikutnya",
         copyright: "© 2025 WELLI. Hak Cipta Dilindungi. | Ditenagai oleh Kreativitas."
+    },
+    a11y: {
+        skipToContent: "Lanjut ke konten utama"
     }
 };
