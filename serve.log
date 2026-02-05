@@ -1,0 +1,109 @@
+ INFO  Accepting connections at http://localhost:3000
+ HTTP  2/5/2026 9:05:37 AM ::1 GET /
+ HTTP  2/5/2026 9:05:37 AM ::1 Returned 200 in 32 ms
+ HTTP  2/5/2026 9:05:37 AM ::1 GET /_next/static/media/2a65768255d6b625-s.p.d19752fb.woff2
+ HTTP  2/5/2026 9:05:37 AM ::1 Returned 200 in 7 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/30fe28aa84c7f7eb.css
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/8f1db2f726bdd7b2.css
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/media/47fe1b7cd6e6ed85-s.p.855a563b.woff2
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/media/8e6fa89aa22d24ec-s.p.3aec397d.woff2
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/media/9a800f173b8d9e8f-s.p.ea25be69.woff2
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/media/a218039a3287bcfd-s.p.4a23d71b.woff2
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 15 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 21 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 20 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 20 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 27 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 29 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/media/c875c6f5d3e977ac-s.p.80fc2c9e.woff2
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/media/e2334d715941921e-s.p.d82a9aff.woff2
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /particles.js
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 9 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 7 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 7 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /images/logo.png
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/6b008e47ecbe5dfb.js
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/406ec2b483ec95d1.js
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/ce6386be2b5072da.js
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/turbopack-e3a444363b60ffb4.js
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 11 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 10 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/7e4ab7735e90c7ab.js
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 15 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 19 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 21 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/fec5ea6183d0e55b.js
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/3b60e5197848a126.js
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 9 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 11 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/8befe94d507d088f.js
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/aad75c58a3605402.js
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 13 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 12 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 98 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/287bc48803860899.js
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/63c0d26a9396fee7.js
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/42ce71a27bf7c9f4.js
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /_next/static/chunks/2ed4818b97537bf3.js
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /images/hero-bg.png
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 11 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 10 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 10 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 11 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 49 ms
+ HTTP  2/5/2026 9:05:38 AM ::1 GET /images/about-me.png
+ HTTP  2/5/2026 9:05:38 AM ::1 Returned 200 in 21 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 2 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/media/2a65768255d6b625-s.p.d19752fb.woff2
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 1 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/30fe28aa84c7f7eb.css
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 4 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/8f1db2f726bdd7b2.css
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/media/47fe1b7cd6e6ed85-s.p.855a563b.woff2
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/media/8e6fa89aa22d24ec-s.p.3aec397d.woff2
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/media/9a800f173b8d9e8f-s.p.ea25be69.woff2
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/media/a218039a3287bcfd-s.p.4a23d71b.woff2
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 3 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 3 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 4 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 5 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 5 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/media/c875c6f5d3e977ac-s.p.80fc2c9e.woff2
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/media/e2334d715941921e-s.p.d82a9aff.woff2
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /particles.js
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 2 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 2 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 4 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /images/logo.png
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/6b008e47ecbe5dfb.js
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/406ec2b483ec95d1.js
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/ce6386be2b5072da.js
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/turbopack-e3a444363b60ffb4.js
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/7e4ab7735e90c7ab.js
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 2 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 2 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 3 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 2 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 2 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 3 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/fec5ea6183d0e55b.js
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 4 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/3b60e5197848a126.js
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/8befe94d507d088f.js
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 2 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 4 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/aad75c58a3605402.js
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 2 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/287bc48803860899.js
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 0 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/63c0d26a9396fee7.js
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 1 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/42ce71a27bf7c9f4.js
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 1 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /_next/static/chunks/2ed4818b97537bf3.js
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 1 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /images/hero-bg.png
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 1 ms
+ HTTP  2/5/2026 9:06:24 AM ::1 GET /images/about-me.png
+ HTTP  2/5/2026 9:06:24 AM ::1 Returned 200 in 1 ms

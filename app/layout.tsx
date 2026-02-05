@@ -78,6 +78,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
       <body className="antialiased font-sans">
+        <a href="#main-content" className="absolute left-0 top-0 z-[10001] -translate-y-full rounded-br-lg bg-[#667eea] px-5 py-3 font-semibold text-white transition-transform focus:translate-y-0 focus:outline-2 focus:outline-white focus:outline-offset-[-2px]">Skip to content</a>
         <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
         {children}
       </body>

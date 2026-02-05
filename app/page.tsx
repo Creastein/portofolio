@@ -109,10 +109,10 @@ export default function Home() {
       {/* Custom Cursor */}
       <CustomCursor />
 
-      <main className="relative min-h-screen bg-slate-900 text-slate-200 overflow-x-hidden">
-        {/* Navigation */}
-        <Navbar />
+      {/* Navigation */}
+      <Navbar />
 
+      <main id="main-content" className="relative min-h-screen bg-slate-900 text-slate-200 overflow-x-hidden">
         {/* Hero Section */}
         <HeroSection />
 
