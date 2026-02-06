@@ -7,6 +7,7 @@ import { LanguageProvider } from './context/LanguageContext';
 
 import LoadingScreen from './components/LoadingScreen';
 import CustomCursor from './components/CustomCursor';
+import SkipLink from './components/SkipLink';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -103,6 +104,9 @@ export default function Home() {
 
   return (
     <LanguageProvider>
+      {/* Skip Link */}
+      <SkipLink />
+
       {/* Loading Screen */}
       <LoadingScreen isLoading={loading} onLoadingComplete={handleLoadingComplete} />
 
