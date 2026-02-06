@@ -1,0 +1,3 @@
+## 2026-02-06 - Tailwind sr-only Toggle Reliability
+**Learning:** In this Next.js 16/Tailwind v4 environment, using the standard utility pattern `sr-only focus:not-sr-only` failed to correctly un-collapse the element on focus (it remained 1x1px). This might be due to specificity or how the `sr-only` class is defined in v4 vs the utility override.
+**Action:** For "Skip to Content" links and similar invisible-until-focused elements, rely on custom CSS classes (`.skip-link`) to explicitly manage the `width`, `height`, `clip`, and `overflow` properties in the `:focus` state rather than trusting utility toggles.
