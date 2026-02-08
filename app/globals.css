@@ -1710,12 +1710,19 @@ body.loaded .hero-item.stagger-5 {
   cursor: pointer;
 }
 
-.skill-tile:hover {
+.skill-tile:hover,
+.skill-tile:focus-visible {
   background: rgba(255, 255, 255, 0.08);
   /* Slightly lighter on hover */
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.skill-tile:focus-visible {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
 }
 
 /* Tooltip on Hover */
@@ -1737,7 +1744,8 @@ body.loaded .hero-item.stagger-5 {
   z-index: 10;
 }
 
-.skill-tile:hover::after {
+.skill-tile:hover::after,
+.skill-tile:focus-visible::after {
   opacity: 1;
 }
 

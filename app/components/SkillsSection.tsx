@@ -3,6 +3,18 @@
 import { frontendSkills, analysisItems, multimediaSkills, officeSkills } from '../data/skillsData';
 import { useLanguage } from '../context/LanguageContext';
 
+const SkillTile = ({ name, icon }: { name: string; icon: string }) => (
+    <div
+        className="skill-tile"
+        title={name}
+        role="img"
+        aria-label={name}
+        tabIndex={0}
+    >
+        <img src={icon} alt="" aria-hidden="true" className="skill-icon-img" />
+    </div>
+);
+
 export default function SkillsSection() {
     const { t } = useLanguage();
 
@@ -20,9 +32,7 @@ export default function SkillsSection() {
                             </div>
                             <div className="skills-tiles-grid">
                                 {frontendSkills.map((skill, index) => (
-                                    <div key={index} className="skill-tile" title={skill.name}>
-                                        <img src={skill.icon} alt={skill.name} className="skill-icon-img" />
-                                    </div>
+                                    <SkillTile key={index} name={skill.name} icon={skill.icon} />
                                 ))}
                             </div>
                         </div>
@@ -34,11 +44,6 @@ export default function SkillsSection() {
                                 <h3>{t.skills.analysis}</h3>
                             </div>
                             <div className="analysis-list">
-                                {/* Manually mapping to match translation keys if needed or rely on static array + translation lookup? 
-                                    Better approach: Use the data structure from existing file but map the LABEL to translation if possible.
-                                    However, the existing data file has hardcoded strings.
-                                    Alternative: Use keys from the translation file and iterate over them.
-                                */}
                                 <div className="analysis-item">
                                     <i className="fas fa-search"></i>
                                     <span>{t.skills.analysisItems.req}</span>
@@ -65,12 +70,8 @@ export default function SkillsSection() {
                                 <h3>{t.skills.multimedia}</h3>
                             </div>
                             <div className="skills-tiles-grid">
-                                {/* ... kept same logic for images ... */}
-                                {/* For brevity, copying logic */}
                                 {multimediaSkills.map((skill, index) => (
-                                    <div key={index} className="skill-tile" title={skill.name}>
-                                        <img src={skill.icon} alt={skill.name} className="skill-icon-img" />
-                                    </div>
+                                    <SkillTile key={index} name={skill.name} icon={skill.icon} />
                                 ))}
                             </div>
                         </div>
@@ -83,9 +84,7 @@ export default function SkillsSection() {
                             </div>
                             <div className="skills-tiles-grid">
                                 {officeSkills.map((skill, index) => (
-                                    <div key={index} className="skill-tile" title={skill.name}>
-                                        <img src={skill.icon} alt={skill.name} className="skill-icon-img" />
-                                    </div>
+                                    <SkillTile key={index} name={skill.name} icon={skill.icon} />
                                 ))}
                             </div>
                         </div>
