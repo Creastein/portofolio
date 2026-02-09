@@ -109,8 +109,10 @@ export default function HeroSection() {
                 <div className="hero-overlay"></div>
                 <div className="container hero-content">
                     <span className="subtitle hero-item stagger-1" data-parallax="0.2">BUSINESS ANALYST & DEVELOPER</span>
-                    <h1 className="hero-item stagger-2" data-parallax="0.1">
-                        <span className="typewriter-text" data-text='["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"]'></span><span className="cursor">|</span>
+                    <h1 className="hero-item stagger-2" data-parallax="0.1" aria-label="WEB & SYSTEM ANALYST, PRODUCT ENGINEER">
+                        <span aria-hidden="true">
+                            <span className="typewriter-text" data-text='["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"]'></span><span className="cursor">|</span>
+                        </span>
                     </h1>
                     <p className="hero-item stagger-3" data-parallax="0.15">I help turn business ideas into simple<br />and useful web experiences.</p>
 
