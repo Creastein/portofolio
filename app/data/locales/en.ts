@@ -1,4 +1,5 @@
 export const en = {
+    skipToContent: "Skip to main content",
     navbar: {
         home: "Home",
         about: "About",
