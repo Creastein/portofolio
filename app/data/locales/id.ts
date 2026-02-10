@@ -1,4 +1,5 @@
 export const id = {
+    skipToContent: "Lompat ke konten utama",
     navbar: {
         home: "Beranda",
         about: "Tentang",

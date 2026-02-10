@@ -6,6 +6,7 @@ import { useScrollSpy } from './hooks/useScrollSpy';
 import { LanguageProvider } from './context/LanguageContext';
 
 import LoadingScreen from './components/LoadingScreen';
+import SkipLink from './components/SkipLink';
 import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
@@ -103,6 +104,9 @@ export default function Home() {
 
   return (
     <LanguageProvider>
+      {/* Skip Link */}
+      <SkipLink />
+
       {/* Loading Screen */}
       <LoadingScreen isLoading={loading} onLoadingComplete={handleLoadingComplete} />
 
