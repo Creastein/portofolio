@@ -109,8 +109,8 @@ export default function HeroSection() {
                 <div className="hero-overlay"></div>
                 <div className="container hero-content">
                     <span className="subtitle hero-item stagger-1" data-parallax="0.2">BUSINESS ANALYST & DEVELOPER</span>
-                    <h1 className="hero-item stagger-2" data-parallax="0.1">
-                        <span className="typewriter-text" data-text='["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"]'></span><span className="cursor">|</span>
+                    <h1 className="hero-item stagger-2" data-parallax="0.1" aria-label="WEB & SYSTEM ANALYST, PRODUCT ENGINEER">
+                        <span className="typewriter-text" data-text='["WEB & SYSTEM ANALYST", "PRODUCT ENGINEER"]' aria-hidden="true"></span><span className="cursor" aria-hidden="true">|</span>
                     </h1>
                     <p className="hero-item stagger-3" data-parallax="0.15">I help turn business ideas into simple<br />and useful web experiences.</p>
 
@@ -122,7 +122,7 @@ export default function HeroSection() {
                     </div>
 
                     <div className="scroll-down hero-item stagger-5">
-                        <a href="#about">SCROLL DOWN <span></span></a>
+                        <a href="#about" aria-label="Scroll down to About section">SCROLL DOWN <span aria-hidden="true"></span></a>
                     </div>
                 </div>
             </section>
